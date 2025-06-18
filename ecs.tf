@@ -193,7 +193,7 @@ resource "aws_iam_policy" "node_additional" {
           "ssmmessages:OpenDataChannel",
           "ssmmessages:OpenControlChannel",
           "ssmmessages:CreateControlChannel",
-          "ssm:UpdateInstanceInformation"
+          "ssm:UpdateInstanceInformation",
         ],
         "Resource" : "*",
         "Effect" : "Allow",
