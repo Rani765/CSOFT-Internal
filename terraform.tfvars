@@ -230,7 +230,7 @@ ecr_tags = {
 ###############################
 create_iam_policy      = true
 iam_policy_description = "ecs task exec addtional policy"
-iam_policy_name        = "csoft-prod-ecs-s3-env-access-policy"
+iam_policy_name        = "csoft-prod-additonal-access-policy"
 iam_policy = {
   "Version" : "2012-10-17",
   "Statement" : [
@@ -275,6 +275,18 @@ iam_policy = {
       "Resource" : [
         "arn:aws:cloudfront::<>:distribution/*"
       ]
+    },
+    {
+      "Sid" : "Statement1",
+      "Effect" : "Allow",
+      "Action" : "elasticfilesystem:*",
+      "Resource" : "*"
+    },
+    {
+      "Sid" : "Statement1",
+      "Effect" : "Allow",
+      "Action" : "ecr:*",
+      "Resource" : "*"
     }
   ]
 
