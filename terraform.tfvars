@@ -277,13 +277,13 @@ iam_policy = {
       ]
     },
     {
-      "Sid" : "Statement1",
+      "Sid" : "efsFullAccess",
       "Effect" : "Allow",
       "Action" : "elasticfilesystem:*",
       "Resource" : "*"
     },
     {
-      "Sid" : "Statement1",
+      "Sid" : "ecrFullAccess",
       "Effect" : "Allow",
       "Action" : "ecr:*",
       "Resource" : "*"
