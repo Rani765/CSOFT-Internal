@@ -281,5 +281,5 @@ iam_policy_tags = {
   "Managedby"     = "Csoft",
   "Environment"   = "Prod",
   "Project"       = "Csoft",
-  "Project"       = "RevUpAI"
+  "Layer"         = "Security"
 }

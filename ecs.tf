@@ -6,6 +6,7 @@ resource "aws_ecs_account_setting_default" "defaults" {
 }
 
 module "ecs_cluster" {
+  depends_on                = [module.vpc]
   source                    = "./modules/ecs_module/cluster"
   create                    = true
   cluster_name              = local.ecs_cluster_name
