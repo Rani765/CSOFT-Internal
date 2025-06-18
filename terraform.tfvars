@@ -119,7 +119,7 @@ key_user_list = [
   "arn:aws:iam::024848447708:role/Workmates-SSO-L2SupportRole",
   "arn:aws:iam::024848447708:role/Terraform-deployer-role",
   "arn:aws:iam::024848447708:role/CWMManagedInstanceRole",
-  "arn:aws:iam::024848447708:role/CSoft-Prod-ECS-Node-Role",
+  #"arn:aws:iam::024848447708:role/CSoft-Prod-ECS-Node-Role",
   "arn:aws:iam::024848447708:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
 ]
 key_aliases                 = ["CSOFT-PROD-CMK"]
