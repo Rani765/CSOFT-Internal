@@ -119,7 +119,7 @@ key_user_list = [
   "arn:aws:iam::024848447708:role/Workmates-SSO-L2SupportRole",
   "arn:aws:iam::024848447708:role/Terraform-deployer-role",
   "arn:aws:iam::024848447708:role/CWMManagedInstanceRole",
-  #"arn:aws:iam::024848447708:role/CSoft-Prod-ECS-Node-Role",
+  "arn:aws:iam::024848447708:role/CSoft-Prod-ECS-Node-Role",
   "arn:aws:iam::024848447708:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
 ]
 key_aliases                 = ["CSOFT-PROD-CMK"]
@@ -210,8 +210,12 @@ asg_security_group_ingress_rules = [
 ########################################################################
 
 repository_names = [
-  "",
-  ""
+  "csoft-prod-identity-server",
+  "csoft-prod-jobserver",
+  "csoft-prod-solr-efs",
+  "csoft-prod-tika-server",
+  "csoft-prod-wiseindex/wiapi",
+  "cosft-prod-zookeeper"
 ]
 
 ecr_tags = {
