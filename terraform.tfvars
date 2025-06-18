@@ -180,7 +180,7 @@ ecs_cluster_tags = {
 ########################################################################
 # ASG for ECS
 ########################################################################
-asg_name = "CSOFT-PROD-ECS-NG-ASG"
+asg_name = "CSoft-Prod-Ecs-Ng-Asg"
 asg_tags = {
   "Implementedby" = "Workmates",
   "Managedby"     = "Csoft",
