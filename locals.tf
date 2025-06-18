@@ -39,7 +39,7 @@ locals {
 
 locals {
   ec2_pritunl_key_name      = var.ec2_pritunl_key_name
-  ec2_pritunl_name          = "RevUpAI-${local.environment}-${var.ec2_pritunl_name}"
+  ec2_pritunl_name          = "CSoft-${local.environment}-${var.ec2_pritunl_name}"
   ec2_pritunl_ingress_rules = var.ec2_pritunl_ingress_rules
   ec2_pritunl_egress_rules  = var.ec2_pritunl_egress_rules
   ec2_pritunl_ami_id        = var.ec2_pritunl_ami_id
@@ -71,13 +71,13 @@ locals {
 # S3
 ####################################################################
 locals {
-  s3_env_bucket = "revupai-env-bucket"
+  s3_env_bucket = "csoft-env-bucket"
 }
 # ####################################################################
 # # ALB
 # ####################################################################
 locals {
-  alb_name = "RevUpAI-POC-alb"
+  alb_name = "Csoft-Prod-Alb"
   alb_tags = {
 
   }
