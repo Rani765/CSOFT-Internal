@@ -114,23 +114,23 @@ module "ec2_pritunl" {
       }
     }
   ]
-#   # ebs_block_device = [
-#   #   {
-#   #     device_name = "/dev/sdf"
-#   #     volume_type = "gp3"
-#   #     volume_size = 30
-#   #     encrypted   = true
-#   #     kms_key_id  = local.ec2_pritunl_kms_key_id
-#   #     tags = merge(
-#   #       {
-#   #         Name = "${local.ec2_pritunl_name}-DATA"
-#   #       },
-#   #       local.ec2_pritunl_tags
-#   #     )
-#   #   }
-#   # ]
+  #   # ebs_block_device = [
+  #   #   {
+  #   #     device_name = "/dev/sdf"
+  #   #     volume_type = "gp3"
+  #   #     volume_size = 30
+  #   #     encrypted   = true
+  #   #     kms_key_id  = local.ec2_pritunl_kms_key_id
+  #   #     tags = merge(
+  #   #       {
+  #   #         Name = "${local.ec2_pritunl_name}-DATA"
+  #   #       },
+  #   #       local.ec2_pritunl_tags
+  #   #     )
+  #   #   }
+  #   # ]
 
-  user_data = templatefile("./scripts/pritunl-ubuntu.sh", { S3_BUCKET_NAME = aws_s3_bucket.credential-bucket.bucket })
+  user_data = templatefile("./scripts/pritunl-al2023.sh", { S3_BUCKET_NAME = aws_s3_bucket.credential-bucket.bucket })
 
   tags = local.ec2_pritunl_tags
 }

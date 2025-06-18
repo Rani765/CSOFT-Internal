@@ -7,9 +7,9 @@ provider "aws" {
   default_tags {
     tags = {
       "Implementedby" = "Workmates",
-      "Managedby"     = "RevUp AI",
-      "Environment"   = "POC",
-      "Project"       = "RevUp AI"
+      "Managedby"     = "Csoft",
+      "Environment"   = "Prod",
+      "Project"       = "Csoft"
     }
   }
 }
