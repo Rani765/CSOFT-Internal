@@ -1,0 +1,187 @@
+name: Terraform Plan and Apply
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed] 
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**'
+      - 'modules/**'
+  push:
+    branches:
+      - 'feature/**'   
+    paths-ignore:
+      - '.github/**'
+      - 'modules/**'        
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+  issues: write
+  actions: read
+
+env:
+  TFVAR_NAME_PROD: terraform.tfvars
+  BRANCH_NAME_PROD: main
+  AWS_REGION: ap-south-1
+  TERRAFORM_VERSION: "1.11.4"
+  ROLE_TO_ASSUME: arn:aws:iam::024848447708:role/Terraform-deployer-role
+  AWS_SESSION_NAME: Terraform-deployer-role
+
+jobs:
+  plan:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged != true }}
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: terraform-${{ github.workflow }}-${{ github.ref }}-${{'global' }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials (Role Assumption)
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ env.ROLE_TO_ASSUME }}
+          role-session-name: ${{ env.AWS_SESSION_NAME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+
+      - name: Detect Branch and Set tfvars & Workspace
+        id: detect_branch
+        run: |
+          BRANCH="${{ github.base_ref || github.event.pull_request.base.ref }}"
+          echo "Branch is: $BRANCH"
+
+          if [ "$BRANCH" == "${BRANCH_NAME_PROD}" ]; then
+            echo "tfvars=${TFVAR_NAME_PROD}" >> $GITHUB_OUTPUT
+            echo "workspace=${BRANCH_NAME_PROD}" >> $GITHUB_OUTPUT
+          else
+            echo "Branch not recognized! Exiting."
+            exit 1
+          fi
+
+
+      - name: Terraform Init
+        run: |
+          terraform init -input=false -no-color
+
+      - name: Select or Create Workspace
+        run: terraform workspace select "${{ steps.detect_branch.outputs.workspace }}" || terraform workspace new "${{ steps.detect_branch.outputs.workspace }}"
+
+      - name: Terraform Validate
+        id: init-validate
+        run: terraform validate -no-color
+
+      - name: Terraform Plan
+        id: plan
+        continue-on-error: true
+        run: |
+          # Ensure root-level summaries directory exists
+          mkdir -p "${{ github.workspace }}/.plan_summaries/"
+          # Capture both stdout and stderr, then tee into a file
+          terraform plan -lock=false -no-color \
+            -var-file="${{ steps.detect_branch.outputs.tfvars }}" \
+            2>&1 \
+            | tee "${{ github.workspace }}/.plan_summaries/plan-output.txt"
+
+      - name: Comment Terraform Plan Summary on PR
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          PLAN_FILE_PATH: ${{ github.workspace }}/.plan_summaries/plan-output.txt
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = process.env.PLAN_FILE_PATH;
+            let planOutput = 'Plan file not found.';
+            if (fs.existsSync(path)) {
+              planOutput = fs.readFileSync(path, 'utf8');
+              if (planOutput.length > 65000) {
+                planOutput = planOutput.slice(0, 65000) + "\n\n...Output truncated...";
+              }
+            }
+            const commentBody = `
+            ### 📊 Terraform Plan Summary 
+
+            #### ⚙️ Init: ${{ steps.init-validate.outcome }}
+            #### ✅ Validate: ${{ steps.init-validate.outcome }}
+            #### 📖 Plan: ${{ steps.plan.outcome }}
+
+            <details><summary>🔍 Show Terraform Plan</summary>
+
+            \`\`\`hcl
+            ${planOutput}
+            \`\`\`
+
+            </details>
+
+            ---
+            
+            🔁 *Triggered by: @${{ github.actor }} using \`${{ github.event_name }}\`*
+            `;
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });
+
+  on-pr-merge:
+    if: ${{ github.event.pull_request.merged == true && github.event.action == 'closed' }}
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: terraform-${{ github.workflow }}-${{ github.ref }}-${{'global' }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials (Role Assumption)
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ env.ROLE_TO_ASSUME }}
+          role-session-name: ${{ env.AWS_SESSION_NAME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+
+      - name: Detect Branch and Set tfvars & Workspace
+        id: detect_branch
+        run: |
+          BRANCH="${{ github.base_ref || github.event.pull_request.base.ref }}"
+          echo "Branch is: $BRANCH"
+
+          if [ "$BRANCH" == "${BRANCH_NAME_PROD}" ]; then
+            echo "tfvars=${TFVAR_NAME_PROD}" >> $GITHUB_OUTPUT
+            echo "workspace=${BRANCH_NAME_PROD}" >> $GITHUB_OUTPUT
+          else
+            echo "Branch not recognized! Exiting."
+            exit 1
+          fi
+
+      - name: Terraform Init
+        run: |
+          terraform init -input=false -no-color
+
+      - name: Select or Create Workspace
+        run: terraform workspace select "${{ steps.detect_branch.outputs.workspace }}" || terraform workspace new "${{ steps.detect_branch.outputs.workspace }}"
+
+      - name: Terraform Apply
+        run: |
+          echo "Running Terraform apply in folder"
+          terraform apply -auto-approve -var-file="${{ steps.detect_branch.outputs.tfvars }}"
