@@ -164,7 +164,7 @@ ecs_node_kp_name = "CSoft-ECS-Node-keypair"
 ecs_cluster_settings = [
   {
     name  = "containerInsights"
-    value = "disabled"
+    value = "enabled"
   }
 ]
 
