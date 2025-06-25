@@ -127,8 +127,8 @@ module "autoscaling" {
   vpc_zone_identifier = [module.vpc.private_subnets[1]]
   health_check_type   = "EC2"
   min_size            = 0
-  max_size            = 4
-  desired_capacity    = 1
+  max_size            = 6
+  desired_capacity    = 4
 
   autoscaling_group_tags = {
     AmazonECSManaged = true
