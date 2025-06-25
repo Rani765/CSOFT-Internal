@@ -164,7 +164,7 @@ ecs_node_kp_name = "CSoft-ECS-Node-keypair"
 ecs_cluster_settings = [
   {
     name  = "containerInsights"
-    value = "disabled"
+    value = "enabled"
   }
 ]
 
@@ -242,8 +242,8 @@ iam_policy = {
         "s3:ListBucket"
       ],
       "Resource" : [
-        "arn:aws:s3:::<>",
-        "arn:aws:s3:::<>/*"
+        "arn:aws:s3:::*",
+        "arn:aws:s3:::*/*"
       ]
     },
     {
@@ -258,8 +258,8 @@ iam_policy = {
         "s3:PutObjectAcl"
       ],
       "Resource" : [
-        "arn:aws:s3:::<>",
-        "arn:aws:s3:::<>/*"
+        "arn:aws:s3:::*",
+        "arn:aws:s3:::*/*"
       ]
     },
     {
@@ -273,7 +273,7 @@ iam_policy = {
         "cloudfront:CreateInvalidation"
       ],
       "Resource" : [
-        "arn:aws:cloudfront::<>:distribution/*"
+        "arn:aws:cloudfront::024848447708:distribution/*"
       ]
     },
     {
