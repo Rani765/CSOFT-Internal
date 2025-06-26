@@ -58,7 +58,52 @@ locals {
   bucketTags                          = var.bucketTags
 
 }
+####################################################################
+# ocapp
+####################################################################
 
+locals {
+  ec2_ocapp_key_name      = var.ec2_ocapp_key_name
+  ec2_ocapp_name          = "CSoft-${local.environment}-${var.ec2_ocapp_name}"
+  ec2_ocapp_ingress_rules = var.ec2_ocapp_ingress_rules
+  ec2_ocapp_egress_rules  = var.ec2_ocapp_egress_rules
+  ec2_ocapp_ami_id        = var.ec2_ocapp_ami_id
+  ec2_ocapp_instance_type = var.ec2_ocapp_instance_type
+  #ec2_ocapp_iam_role_name           = var.ec2_ocapp_iam_role_name
+  ec2_ocapp_iam_role_policies       = var.ec2_ocapp_iam_role_policies
+  ec2_ocapp_volume_type             = var.ec2_ocapp_volume_type
+  ec2_ocapp_volume_size             = var.ec2_ocapp_volume_size
+  ec2_ocapp_kms_key_id              = module.kms_complete.key_arn
+  ec2_ocapp_root_encrypted          = var.ec2_ocapp_root_encrypted
+  ec2_ocapp_ebs_block_devices       = var.ec2_ocapp_ebs_block_devices
+  ec2_ocapp_tags                    = var.ec2_ocapp_tags
+  ec2_ocapp_disable_api_termination = var.ec2_ocapp_termination_protection
+  ec2_ocapp_iam_instance_profile    = var.ec2_ocapp_iam_instance_profile
+
+}
+####################################################################
+# ocdb
+####################################################################
+
+locals {
+  ec2_ocdb_key_name      = var.ec2_ocdb_key_name
+  ec2_ocdb_name          = "CSoft-${local.environment}-${var.ec2_ocdb_name}"
+  ec2_ocdb_ingress_rules = var.ec2_ocdb_ingress_rules
+  ec2_ocdb_egress_rules  = var.ec2_ocdb_egress_rules
+  ec2_ocdb_ami_id        = var.ec2_ocdb_ami_id
+  ec2_ocdb_instance_type = var.ec2_ocdb_instance_type
+  #ec2_ocdb_iam_role_name           = var.ec2_ocdb_iam_role_name
+  ec2_ocdb_iam_role_policies       = var.ec2_ocdb_iam_role_policies
+  ec2_ocdb_volume_type             = var.ec2_ocdb_volume_type
+  ec2_ocdb_volume_size             = var.ec2_ocdb_volume_size
+  ec2_ocdb_kms_key_id              = module.kms_complete.key_arn
+  ec2_ocdb_root_encrypted          = var.ec2_ocdb_root_encrypted
+  ec2_ocdb_ebs_block_devices       = var.ec2_ocdb_ebs_block_devices
+  ec2_ocdb_tags                    = var.ec2_ocdb_tags
+  ec2_ocdb_disable_api_termination = var.ec2_ocdb_termination_protection
+  ec2_ocdb_iam_instance_profile    = var.ec2_ocdb_iam_instance_profile
+
+}
 ####################################################################
 # ECR
 ####################################################################
@@ -77,7 +122,7 @@ locals {
 # # ALB
 # ####################################################################
 locals {
-  alb_name = "Csoft-Prod-Alb"
+  alb_name = "Csoft-prod-alb"
   alb_tags = {
 
   }

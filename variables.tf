@@ -306,3 +306,139 @@ variable "iam_policy" {
 variable "iam_policy_tags" {
   type = map(string)
 }
+########################################################################
+# ocapp
+########################################################################
+variable "ec2_ocapp_ami_id" {
+  type = string
+}
+variable "ec2_ocapp_instance_type" {
+  type = string
+}
+variable "ec2_ocapp_name" {
+  type = string
+}
+# variable "ec2_ocapp_iam_role_name" {
+#   type = string
+# }
+variable "ec2_ocapp_iam_role_policies" {
+  type    = map(string)
+  default = {}
+}
+variable "ec2_ocapp_volume_type" {
+  type = string
+}
+variable "ec2_ocapp_volume_size" {
+  type = string
+}
+# variable "ec2_ocapp_kms_key_id" {
+#   type = string
+# }
+variable "ec2_ocapp_root_encrypted" {
+  type = bool
+}
+variable "ec2_ocapp_ebs_block_devices" {
+  type    = list(any)
+  default = []
+}
+variable "ec2_ocapp_tags" {
+  type = map(string)
+}
+variable "ec2_ocapp_key_name" {
+  type = string
+}
+variable "ec2_ocapp_termination_protection" {
+  type = bool
+}
+variable "ec2_ocapp_iam_instance_profile" {
+  type = string
+}
+variable "ec2_ocapp_ingress_rules" {
+  description = "List of ingress rules"
+  type = list(object({
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+  default = []
+}
+
+variable "ec2_ocapp_egress_rules" {
+  description = "List of egress rules"
+  type = list(object({
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+  default = []
+}
+########################################################################
+# ocdb
+########################################################################
+variable "ec2_ocdb_ami_id" {
+  type = string
+}
+variable "ec2_ocdb_instance_type" {
+  type = string
+}
+variable "ec2_ocdb_name" {
+  type = string
+}
+# variable "ec2_ocdb_iam_role_name" {
+#   type = string
+# }
+variable "ec2_ocdb_iam_role_policies" {
+  type    = map(string)
+  default = {}
+}
+variable "ec2_ocdb_volume_type" {
+  type = string
+}
+variable "ec2_ocdb_volume_size" {
+  type = string
+}
+# variable "ec2_ocdb_kms_key_id" {
+#   type = string
+# }
+variable "ec2_ocdb_root_encrypted" {
+  type = bool
+}
+variable "ec2_ocdb_ebs_block_devices" {
+  type    = list(any)
+  default = []
+}
+variable "ec2_ocdb_tags" {
+  type = map(string)
+}
+variable "ec2_ocdb_key_name" {
+  type = string
+}
+variable "ec2_ocdb_termination_protection" {
+  type = bool
+}
+variable "ec2_ocdb_iam_instance_profile" {
+  type = string
+}
+variable "ec2_ocdb_ingress_rules" {
+  description = "List of ingress rules"
+  type = list(object({
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+  default = []
+}
+
+variable "ec2_ocdb_egress_rules" {
+  description = "List of egress rules"
+  type = list(object({
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+  default = []
+}

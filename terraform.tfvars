@@ -299,3 +299,87 @@ iam_policy_tags = {
   "Project"       = "Csoft",
   "Layer"         = "Security"
 }
+
+########################################
+# ocapp
+########################################
+ec2_ocapp_ami_id        = "ami-0b09627181c8d5778"
+ec2_ocapp_instance_type = "t3a.micro"
+ec2_ocapp_name          = "ocapp"
+#ec2_ocapp_iam_role_name = "CWMManagedInstanceRole"
+ec2_ocapp_volume_type = "gp3"
+ec2_ocapp_volume_size = "20"
+#ec2_ocapp_kms_key_id     = ""
+ec2_ocapp_root_encrypted = true
+ec2_ocapp_tags = {
+  "Implementedby" = "Workmates",
+  "Managedby"     = "Csoft",
+  "Environment"   = "Prod",
+  "Project"       = "Csoft",
+  "Layer"         = "Gateway"
+}
+ec2_ocapp_key_name               = "Csoft-ocapp-VPN-1b-keypair"
+ec2_ocapp_termination_protection = true
+ec2_ocapp_iam_instance_profile   = "CWMManagedInstanceRole"
+ec2_ocapp_ingress_rules = [
+  {
+    cidr_blocks = ["10.189.0.0/16"]
+    from_port   = 80
+    protocol    = "tcp"
+    to_port     = 80
+  },
+  {
+    cidr_blocks = ["10.189.0.0/16"]
+    from_port   = 3389
+    protocol    = "tcp"
+    to_port     = 3389
+  },
+]
+ec2_ocapp_egress_rules = [{
+  cidr_blocks = ["0.0.0.0/0"]
+  from_port   = 0
+  protocol    = "-1"
+  to_port     = 0
+}]
+########################################
+# ocdb
+########################################
+ec2_ocdb_ami_id        = "ami-0b09627181c8d5778"
+ec2_ocdb_instance_type = "t3a.micro"
+ec2_ocdb_name          = "ocdb"
+#ec2_ocdb_iam_role_name = "CWMManagedInstanceRole"
+ec2_ocdb_volume_type = "gp3"
+ec2_ocdb_volume_size = "20"
+#ec2_ocdb_kms_key_id     = ""
+ec2_ocdb_root_encrypted = true
+ec2_ocdb_tags = {
+  "Implementedby" = "Workmates",
+  "Managedby"     = "Csoft",
+  "Environment"   = "Prod",
+  "Project"       = "Csoft",
+  "Layer"         = "Gateway"
+}
+ec2_ocdb_key_name               = "Csoft-ocdb-VPN-1b-keypair"
+ec2_ocdb_termination_protection = true
+ec2_ocdb_iam_instance_profile   = "CWMManagedInstanceRole"
+ec2_ocdb_ingress_rules = [
+  {
+    cidr_blocks = ["10.189.0.0/16"]
+    from_port   = 1443
+    protocol    = "tcp"
+    to_port     = 1443
+  },
+  {
+    cidr_blocks = ["10.189.0.0/16"]
+    from_port   = 3389
+    protocol    = "tcp"
+    to_port     = 3389
+  },
+
+]
+ec2_ocdb_egress_rules = [{
+  cidr_blocks = ["0.0.0.0/0"]
+  from_port   = 0
+  protocol    = "-1"
+  to_port     = 0
+}]

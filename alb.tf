@@ -76,7 +76,7 @@ module "alb" {
       backend_protocol                  = "HTTP"
       backend_port                      = "8983"
       name                              = "csoft-prod-solr-tg"
-      target_type                       = "IP"
+      target_type                       = "ip"
       deregistration_delay              = 5
       load_balancing_cross_zone_enabled = true
 
