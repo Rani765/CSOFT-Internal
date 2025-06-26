@@ -303,12 +303,12 @@ iam_policy_tags = {
 ########################################
 # ocapp
 ########################################
-ec2_ocapp_ami_id        = "ami-0b09627181c8d5778"
-ec2_ocapp_instance_type = "t3a.micro"
-ec2_ocapp_name          = "ocapp"
+ec2_ocapp_ami_id        = "ami-04c72f0698ef00511"
+ec2_ocapp_instance_type = "t3a.medium"
+ec2_ocapp_name          = "OCApp"
 #ec2_ocapp_iam_role_name = "CWMManagedInstanceRole"
 ec2_ocapp_volume_type = "gp3"
-ec2_ocapp_volume_size = "20"
+ec2_ocapp_volume_size = "100"
 #ec2_ocapp_kms_key_id     = ""
 ec2_ocapp_root_encrypted = true
 ec2_ocapp_tags = {
@@ -316,9 +316,9 @@ ec2_ocapp_tags = {
   "Managedby"     = "Csoft",
   "Environment"   = "Prod",
   "Project"       = "Csoft",
-  "Layer"         = "Gateway"
+  "Layer"         = "App"
 }
-ec2_ocapp_key_name               = "Csoft-ocapp-VPN-1b-keypair"
+ec2_ocapp_key_name               = "Csoft-OCApp-1b-keypair"
 ec2_ocapp_termination_protection = true
 ec2_ocapp_iam_instance_profile   = "CWMManagedInstanceRole"
 ec2_ocapp_ingress_rules = [
@@ -344,12 +344,12 @@ ec2_ocapp_egress_rules = [{
 ########################################
 # ocdb
 ########################################
-ec2_ocdb_ami_id        = "ami-0b09627181c8d5778"
-ec2_ocdb_instance_type = "t3a.micro"
-ec2_ocdb_name          = "ocdb"
+ec2_ocdb_ami_id        = "ami-013af302caec5a522"
+ec2_ocdb_instance_type = "t3a.medium"
+ec2_ocdb_name          = "OC-DB"
 #ec2_ocdb_iam_role_name = "CWMManagedInstanceRole"
 ec2_ocdb_volume_type = "gp3"
-ec2_ocdb_volume_size = "20"
+ec2_ocdb_volume_size = "100"
 #ec2_ocdb_kms_key_id     = ""
 ec2_ocdb_root_encrypted = true
 ec2_ocdb_tags = {
@@ -359,7 +359,7 @@ ec2_ocdb_tags = {
   "Project"       = "Csoft",
   "Layer"         = "Gateway"
 }
-ec2_ocdb_key_name               = "Csoft-ocdb-VPN-1b-keypair"
+ec2_ocdb_key_name               = "Csoft-OCDB-1b-keypair"
 ec2_ocdb_termination_protection = true
 ec2_ocdb_iam_instance_profile   = "CWMManagedInstanceRole"
 ec2_ocdb_ingress_rules = [
