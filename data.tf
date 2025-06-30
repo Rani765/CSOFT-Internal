@@ -39,3 +39,11 @@ data "aws_key_pair" "pritunl" {
   key_name           = var.ec2_pritunl_key_name
   include_public_key = true
 }
+data "aws_key_pair" "ocapp" {
+  key_name           = var.ec2_ocapp_key_name
+  include_public_key = true
+}
+data "aws_key_pair" "ocdb" {
+  key_name           = var.ec2_ocdb_key_name
+  include_public_key = true
+}

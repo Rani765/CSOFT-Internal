@@ -99,7 +99,7 @@ module "alb" {
     tika_ecs = {
       backend_protocol                  = "HTTP"
       backend_port                      = "80"
-      name                              = "csoft-prod-tika-tg"
+      name                              = "csoft-prod-tika-tgs"
       target_type                       = "instance"
       deregistration_delay              = 5
       load_balancing_cross_zone_enabled = true
