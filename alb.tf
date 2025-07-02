@@ -212,12 +212,12 @@ module "alb-pub-securtiy-group" {
 module "alb-pub" {
   source = "./modules/loadbalancer_module"
 
-  name = local.alb_name
+  name = local.alb_name_pub
 
   load_balancer_type = "application"
   internal           = false
   vpc_id             = module.vpc.vpc_id
-  subnets            = [element(module.vpc.private_subnets, 0), element(module.vpc.private_subnets, 1)]
+  subnets            = [element(module.vpc.public_subnets, 0), element(module.vpc.public_subnets, 1)]
 
   # For example only
   enable_deletion_protection = false
