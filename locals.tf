@@ -122,7 +122,8 @@ locals {
 # # ALB
 # ####################################################################
 locals {
-  alb_name = "Csoft-prod-alb"
+  alb_name     = "Csoft-prod-alb"
+  alb_name_pub = "Csoft-prod-pub-alb"
   alb_tags = {
 
   }
