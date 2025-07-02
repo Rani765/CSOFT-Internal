@@ -127,7 +127,7 @@ module "autoscaling" {
   vpc_zone_identifier = [module.vpc.private_subnets[1]]
   health_check_type   = "EC2"
   min_size            = 0
-  max_size            = 6
+  max_size            = 5
   desired_capacity    = 4
 
   autoscaling_group_tags = {
