@@ -22,10 +22,10 @@ module "ec2_ocapp" {
   ami                         = local.ec2_ocapp_ami_id
   instance_type               = local.ec2_ocapp_instance_type
   availability_zone           = element(module.vpc.azs, 0)
-  subnet_id                   = element(module.vpc.public_subnets, 0)
+  subnet_id                   = element(module.vpc.private_subnets, 0)
   vpc_security_group_ids      = [module.ocapp-securtiy-group.security_group_id]
   key_name                    = data.aws_key_pair.ocapp.key_name
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   disable_api_stop            = false
   disable_api_termination     = local.ec2_ocapp_disable_api_termination
   ebs_optimized               = true
@@ -81,10 +81,10 @@ module "ec2_ocdb" {
   ami                         = local.ec2_ocdb_ami_id
   instance_type               = local.ec2_ocdb_instance_type
   availability_zone           = element(module.vpc.azs, 0)
-  subnet_id                   = element(module.vpc.public_subnets, 0)
+  subnet_id                   = element(module.vpc.private_subnets, 0)
   vpc_security_group_ids      = [module.ocdb-securtiy-group.security_group_id]
   key_name                    = data.aws_key_pair.ocdb.key_name
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   disable_api_stop            = false
   disable_api_termination     = local.ec2_ocdb_disable_api_termination
   ebs_optimized               = true
@@ -112,7 +112,7 @@ module "ec2_ocdb" {
     sudo systemctl start snap.amazon-ssm-agent.amazon-ssm-agent.service
     sudo systemctl status snap.amazon-ssm-agent.amazon-ssm-agent.service
   EOF 
-  tags = local.ec2_ocdb_tags
+  tags      = local.ec2_ocdb_tags
 }
 
 

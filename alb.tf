@@ -14,9 +14,9 @@ module "alb" {
   name = local.alb_name
 
   load_balancer_type = "application"
-  internal = true
-  vpc_id  = module.vpc.vpc_id
-  subnets = [element(module.vpc.private_subnets, 0), element(module.vpc.private_subnets, 1)]
+  internal           = true
+  vpc_id             = module.vpc.vpc_id
+  subnets            = [element(module.vpc.private_subnets, 0), element(module.vpc.private_subnets, 1)]
 
   # For example only
   enable_deletion_protection = false
@@ -28,16 +28,16 @@ module "alb" {
     http = {
       port     = 80
       protocol = "HTTP"
-    #   redirect = {
-    #     port        = "443"
-    #     protocol    = "HTTPS"
-    #     status_code = "HTTP_301"
-    #   }
+      #   redirect = {
+      #     port        = "443"
+      #     protocol    = "HTTPS"
+      #     status_code = "HTTP_301"
+      #   }
       fixed_response = {
         content_type = "text/plain",
         message_body = "Request Correct URL",
         status_code  = "404"
-      }    
+      }
       # forward = {
       #   target_group_key = "app_ecs"
       # }
@@ -85,7 +85,7 @@ module "alb" {
         healthy_threshold   = 5
         interval            = 30
         matcher             = "200"
-        path                = "/solr"
+        path                = "/solr/"
         port                = "traffic-port"
         protocol            = "HTTP"
         timeout             = 5
@@ -143,7 +143,7 @@ module "alb" {
       # Theres nothing to attach here in this definition. Instead,
       # ECS will attach the IPs of the tasks to this target group
       create_attachment = false
-    }  
+    }
     jobsrv_ecs = {
       backend_protocol                  = "HTTP"
       backend_port                      = "80"
@@ -191,7 +191,7 @@ module "alb" {
       # Theres nothing to attach here in this definition. Instead,
       # ECS will attach the IPs of the tasks to this target group
       create_attachment = false
-    }                 
+    }
   }
   tags = local.alb_tags
 }
@@ -215,9 +215,9 @@ module "alb-pub" {
   name = local.alb_name
 
   load_balancer_type = "application"
-  internal = false
-  vpc_id  = module.vpc.vpc_id
-  subnets = [element(module.vpc.private_subnets, 0), element(module.vpc.private_subnets, 1)]
+  internal           = false
+  vpc_id             = module.vpc.vpc_id
+  subnets            = [element(module.vpc.private_subnets, 0), element(module.vpc.private_subnets, 1)]
 
   # For example only
   enable_deletion_protection = false
@@ -229,16 +229,16 @@ module "alb-pub" {
     http = {
       port     = 80
       protocol = "HTTP"
-    #   redirect = {
-    #     port        = "443"
-    #     protocol    = "HTTPS"
-    #     status_code = "HTTP_301"
-    #   }
+      #   redirect = {
+      #     port        = "443"
+      #     protocol    = "HTTPS"
+      #     status_code = "HTTP_301"
+      #   }
       fixed_response = {
         content_type = "text/plain",
         message_body = "Request Correct URL",
         status_code  = "404"
-      }    
+      }
       # forward = {
       #   target_group_key = "app_ecs"
       # }
@@ -296,7 +296,7 @@ module "alb-pub" {
       # Theres nothing to attach here in this definition. Instead,
       # ECS will attach the IPs of the tasks to this target group
       create_attachment = false
-    }                 
+    }
   }
   tags = local.alb_tags
 }
