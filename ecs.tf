@@ -128,7 +128,7 @@ module "autoscaling" {
   health_check_type   = "EC2"
   min_size            = 0
   max_size            = 5
-  desired_capacity    = 4
+  desired_capacity    = 5
 
   autoscaling_group_tags = {
     AmazonECSManaged = true

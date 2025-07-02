@@ -26,7 +26,7 @@ module "alb" {
 
   listeners = {
     http = {
-      port     = 80
+      port     = 81
       protocol = "HTTP"
       #   redirect = {
       #     port        = "443"
