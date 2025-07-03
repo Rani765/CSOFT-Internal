@@ -7,7 +7,15 @@ module "alb-global-securtiy-group" {
   ingress_rules = local.alb_global_ingress_rules
   egress_rules  = local.alb_global_egress_rules
 }
+module "alb-pvt-securtiy-group" {
+  source      = "./modules/sg"
+  name        = "Csoft-prod-pvt-alb-sg"
+  description = "alb-global Security group"
+  vpc_id      = local.alb_vpc_id
 
+  ingress_rules = local.alb_global_ingress_rules
+  egress_rules  = local.alb_global_egress_rules
+}
 module "alb" {
   source = "./modules/loadbalancer_module"
 
@@ -22,7 +30,7 @@ module "alb" {
   enable_deletion_protection = false
 
   # Security Group
-  security_groups = [module.alb-global-securtiy-group.security_group_id]
+  security_groups = [module.alb-pvt-securtiy-group.security_group_id]
 
   listeners = {
     http = {
