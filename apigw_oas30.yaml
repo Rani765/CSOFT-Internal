@@ -1,0 +1,2151 @@
+openapi: "3.0.1"
+info:
+  title: "csoft-prod-wiapi-gt"
+  version: "2025-07-02 10:15:12UTC"
+servers:
+- url: "https://pddl0klrb4.execute-api.eu-west-1.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "prod"
+paths:
+  /Version:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /Version"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Department/GetDepartmentDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/Department/GetDepartmentDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Department/GetDepartmentList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/Department/GetDepartmentList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Report/GetReportDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/Report/GetReportDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Report/GetReportList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/Report/GetReportList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/cache/GetDocumentList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/cache/GetDocumentList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/cache/GetReportPeviewResult:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/cache/GetReportPeviewResult"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/cache/GetSuggestion:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/cache/GetSuggestion"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/configuration/GetConfigurationDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/configuration/GetConfigurationDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetAllAnnotation:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetAllAnnotation"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetAllAvailableTagForAFile:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetAllAvailableTagForAFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetAllTagForAFile:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetAllTagForAFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetAnnotationComment:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetAnnotationComment"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetAuditTrailForAFile:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetAuditTrailForAFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetDocumentListFromSolr:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetDocumentListFromSolr"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetFolderList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetFolderList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetFolderSize:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetFolderSize"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetRelatedFiles:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetRelatedFiles"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/GetRelativePathForaFile:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/document/GetRelativePathForaFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/GetEnterpriseDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/enterprise/GetEnterpriseDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/GetEnterpriseList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/enterprise/GetEnterpriseList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/GetEnterpriseProfileSetupDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/enterprise/GetEnterpriseProfileSetupDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetAllFieldList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetAllFieldList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetAllSolrField:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetAllSolrField"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetAvailableUser:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetAvailableUser"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetFieldDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetFieldDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetFieldListForDepartment:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetFieldListForDepartment"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetFieldListForProject:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetFieldListForProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetFieldShortList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetFieldShortList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetFldValuesForAFile:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetFldValuesForAFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetFldValuesForFileUpload:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetFldValuesForFileUpload"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetLookupFldDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetLookupFldDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetTaskFieldListForWorkFlow:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetTaskFieldListForWorkFlow"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/GetUserFldDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/field/GetUserFldDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/filter/GetFilterDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/filter/GetFilterDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/filter/GetFilterList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/filter/GetFilterList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/filter/GetProjectFilterList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/filter/GetProjectFilterList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/license/GetEnterpriseLicenseStatusFromDB:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/license/GetEnterpriseLicenseStatusFromDB"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/AddFileExtentation:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/AddFileExtentation"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/BuildProject:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/BuildProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/GenerateReportForProject:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/GenerateReportForProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/GetAllBatchHistoryForProject:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/GetAllBatchHistoryForProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/GetDataManagementInfo:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/GetDataManagementInfo"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/GetProjectDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/GetProjectDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/GetProjectList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/GetProjectList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/GetProjectStatus:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/GetProjectStatus"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/GetSchedulerListForProject:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/GetSchedulerListForProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/Reindexing:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/Reindexing"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/Synchronize:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/project/Synchronize"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/projectaccess/GetProjectAccessForAnUser:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/projectaccess/GetProjectAccessForAnUser"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/projectaccess/GetProjectAccessGroupDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/projectaccess/GetProjectAccessGroupDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/projectaccess/GetProjectAccessGroupList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/projectaccess/GetProjectAccessGroupList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/projectaccess/GetProjectAccessList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/projectaccess/GetProjectAccessList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/revision/GetRevisionFileList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/revision/GetRevisionFileList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/role/GetAccessListForRoleDefinition:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/role/GetAccessListForRoleDefinition"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/role/GetRoleDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/role/GetRoleDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/role/GetRoleGradeList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/role/GetRoleGradeList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/role/GetRoleList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/role/GetRoleList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/CreateSubscription:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/subscriptions/CreateSubscription"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/GetDownloadlinkForInvoice:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/subscriptions/GetDownloadlinkForInvoice"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/GetEnterpriseSubscriptionStatusFromDB:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/subscriptions/GetEnterpriseSubscriptionStatusFromDB"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/GetInvoiceList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/subscriptions/GetInvoiceList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/GetPlanList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/subscriptions/GetPlanList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetDocumentListForATask:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetDocumentListForATask"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetHistoryForATask:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetHistoryForATask"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTaskAllComment:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTaskAllComment"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTaskDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTaskDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTaskDetailForTaskName:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTaskDetailForTaskName"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTaskList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTaskList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTaskListForAFile:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTaskListForAFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTemplateDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTemplateDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTemplateFieldValues:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTemplateFieldValues"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/GetTemplateList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/task/GetTemplateList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/CheckEmalId:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/CheckEmalId"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetAdminUserList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetAdminUserList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetAvailableLanguage:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetAvailableLanguage"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetCurrentInfo:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetCurrentInfo"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetDashBoardDetailsForUser:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetDashBoardDetailsForUser"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetDepartmentwiseUsersAvailability:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetDepartmentwiseUsersAvailability"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetEnterpriseInfoByUserName:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetEnterpriseInfoByUserName"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetLoggedInUserCurrentInfo:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetLoggedInUserCurrentInfo"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetManagerList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetManagerList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetReporteeList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetReporteeList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetSetupDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetSetupDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+    options:
+      responses:
+        default:
+          description: "Default response for OPTIONS /api/user/GetSetupDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetSupervisorList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetSupervisorList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetUserDetails:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetUserDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetUserList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetUserList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetUserListForAnDepartment:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetUserListForAnDepartment"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/GetUserlistForLastMonth:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/user/GetUserlistForLastMonth"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/view/GetViewDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/view/GetViewDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/view/GetViewGroupDetail:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/view/GetViewGroupDetail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/view/GetViewList:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /api/view/GetViewList"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/Login:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/Login"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+    options:
+      responses:
+        default:
+          description: "Default response for OPTIONS /api/user/Login"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Department/ActivateDeactivateDepartment:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/Department/ActivateDeactivateDepartment"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Department/AddEditDepartment:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/Department/AddEditDepartment"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Report/AddEditReport:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/Report/AddEditReport"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/Report/DeleteReport:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/Report/DeleteReport"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/AddAnnotationComment:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/AddAnnotationComment"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/AddEditFolder:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/AddEditFolder"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/AddEditRecentAccessedFiles:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/AddEditRecentAccessedFiles"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/AddEditTagForAFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/AddEditTagForAFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/AddRelatedFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/AddRelatedFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/AddRemoveXrefLinkFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/AddRemoveXrefLinkFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/CopyFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/CopyFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/DeleteAnnotation:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/DeleteAnnotation"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/DeleteFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/DeleteFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/DeleteRelatedFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/DeleteRelatedFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/DeleteTagForAFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/DeleteTagForAFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/MoveFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/MoveFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/SaveAnnotation:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/SaveAnnotation"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/UpdateThumbnail:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/UpdateThumbnail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/UploadDocument:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/UploadDocument"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/downloadfile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/downloadfile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/document/upload:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/document/upload"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/AddEditEnterprise:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/enterprise/AddEditEnterprise"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/AddEditEnterpriseProfileSetup:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/enterprise/AddEditEnterpriseProfileSetup"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/NewRegistration:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/enterprise/NewRegistration"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/RegisterEnterprise:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/enterprise/RegisterEnterprise"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/SaveEnterpriseConfig:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/enterprise/SaveEnterpriseConfig"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/enterprise/TestDomainConnection:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/enterprise/TestDomainConnection"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/ActivateDeactivateField:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/field/ActivateDeactivateField"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/AddEditField:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/field/AddEditField"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/field/AddEditFieldValueForFile:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/field/AddEditFieldValueForFile"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/filter/AddEditFilter:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/filter/AddEditFilter"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/filter/DeleteFilter:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/filter/DeleteFilter"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/ActivateDeactivateProject:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/project/ActivateDeactivateProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/AddEditProject:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/project/AddEditProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/RestoreDataForProject:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/project/RestoreDataForProject"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/RetryWFStep:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/project/RetryWFStep"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/project/SaveDataManagementInfo:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/project/SaveDataManagementInfo"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/projectaccess/AddEditProjectAccessGroup:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/projectaccess/AddEditProjectAccessGroup"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/role/AddEditRole:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/role/AddEditRole"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/sessionmanager/LogOff:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/sessionmanager/LogOff"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/sessionmanager/SessionCheck:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/sessionmanager/SessionCheck"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/sourcecontrol/FileCheckOut:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/sourcecontrol/FileCheckOut"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/AddEditEnterpriseSubscriptions:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/subscriptions/AddEditEnterpriseSubscriptions"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/AddEnterpriseSubscriptions:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/subscriptions/AddEnterpriseSubscriptions"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/CancelSubscription:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/subscriptions/CancelSubscription"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/EditEnterpriseSubscriptionsDetails:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/subscriptions/EditEnterpriseSubscriptionsDetails"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/GetPaymentUrl:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/subscriptions/GetPaymentUrl"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/subscriptions/PaymentFailureNotification:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/subscriptions/PaymentFailureNotification"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/AddEditTask:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/task/AddEditTask"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/AddEditTemplate:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/task/AddEditTemplate"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/AddRelatedDocumentForATask:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/task/AddRelatedDocumentForATask"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/AddTaskComments:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/task/AddTaskComments"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/task/DeleteRelatedDocumentForATask:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/task/DeleteRelatedDocumentForATask"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/AddEditUser:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/AddEditUser"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/CheckOldPassword:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/CheckOldPassword"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/DeactivateAnUser:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/DeactivateAnUser"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/ResetPassword:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/ResetPassword"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/SetDefaultView:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/SetDefaultView"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/TestMail:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/TestMail"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/UpdateCurrentInfo:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/UpdateCurrentInfo"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/UpdatePassword:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/UpdatePassword"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/user/ValidateDomainUser:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/user/ValidateDomainUser"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/view/AddEditGroup:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/view/AddEditGroup"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/view/AddEditTempView:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/view/AddEditTempView"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/view/AddEditView:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/view/AddEditView"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+  /api/view/DeleteView:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /api/view/DeleteView"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "1.0"
+        connectionId: "${apigw_vpc_link_id}"
+        type: "http_proxy"
+        httpMethod: "ANY"
+        uri: "${alb_listener_arn}"
+        connectionType: "VPC_LINK"
+        timeoutInMillis: 30000
+x-amazon-apigateway-cors:
+  allowMethods:
+  - "GET"
+  - "OPTIONS"
+  - "POST"
+  allowHeaders:
+  - "accesstoken"
+  - "annotationblocks"
+  - "authorization"
+  - "calledfrom"
+  - "content-type"
+  - "departmentid"
+  - "efid"
+  - "enterpriseid"
+  - "facetquery"
+  - "fileid"
+  - "filterid"
+  - "filterlines"
+  - "fullhistory"
+  - "fullrevisions"
+  - "internalcall"
+  - "invoice_number"
+  - "isactive"
+  - "isexport"
+  - "issystemadminmode"
+  - "issystemadminuser"
+  - "loginuserid"
+  - "loginusername"
+  - "mode"
+  - "movefile"
+  - "pageno"
+  - "projectid"
+  - "reportidlist"
+  - "roleid"
+  - "searchstring"
+  - "sessionid"
+  - "taglist"
+  - "tdid"
+  - "type"
+  - "userid"
+  - "versionid"
+  - "viewid"
+  - "wfid"
+  exposeHeaders:
+  - "*"
+  maxAge: 3600
+  allowCredentials: true
+  allowOrigins:
+  - "https://wiseindex.app"
+x-amazon-apigateway-importexport-version: "1.0"
