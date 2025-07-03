@@ -1,12 +1,4 @@
-module "alb-global-securtiy-group" {
-  source      = "./modules/sg"
-  name        = "RevUpAI-ALB-SG"
-  description = "alb-global Security group"
-  vpc_id      = local.alb_vpc_id
 
-  ingress_rules = local.alb_global_ingress_rules
-  egress_rules  = local.alb_global_egress_rules
-}
 module "alb-pvt-securtiy-group" {
   source      = "./modules/sg"
   name        = "Csoft-prod-pvt-alb-sg"
