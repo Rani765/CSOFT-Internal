@@ -161,3 +161,11 @@ locals {
   }
   ecs_node_kp_name = var.ecs_node_kp_name
 }
+####################################################################
+# API GW
+####################################################################
+locals {
+  apigw_vpc_link_ingress_rules = var.apigw_vpc_link_ingress_rules
+  apigw_vpc_link_egress_rules  = var.apigw_vpc_link_egress_rules
+
+}

@@ -442,3 +442,27 @@ variable "ec2_ocdb_egress_rules" {
   }))
   default = []
 }
+########################################################################
+# API GW
+########################################################################
+variable "apigw_vpc_link_ingress_rules" {
+  description = "List of egress rules"
+  type = list(object({
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+  default = []
+}
+variable "apigw_vpc_link_egress_rules" {
+  description = "List of egress rules"
+  type = list(object({
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+  default = []
+}
+

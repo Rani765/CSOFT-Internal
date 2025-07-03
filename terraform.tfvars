@@ -383,3 +383,30 @@ ec2_ocdb_egress_rules = [{
   protocol    = "-1"
   to_port     = 0
 }]
+
+########################################
+# api gw
+########################################
+
+apigw_vpc_link_ingress_rules = [
+  {
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 80
+    protocol    = "tcp"
+    to_port     = 80
+  },
+  {
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 443
+    protocol    = "tcp"
+    to_port     = 443
+  },
+]
+apigw_vpc_link_egress_rules = [
+  {
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 0
+    protocol    = "-1"
+    to_port     = 0
+  }
+]
