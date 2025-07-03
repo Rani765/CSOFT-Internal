@@ -1,6 +1,6 @@
 module "alb-global-securtiy-group" {
   source      = "./modules/sg"
-  name        = "Csoft-prod-alb-sg"
+  name        = "RevUpAI-ALB-SG"
   description = "alb-global Security group"
   vpc_id      = local.alb_vpc_id
 
