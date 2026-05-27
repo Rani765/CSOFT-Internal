@@ -22,4 +22,3 @@ terraform {
     key          = "terraform.tfstate"
   }
 }
-
