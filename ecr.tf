@@ -9,7 +9,7 @@ module "ecr_repositories" {
   repository_names        = local.repository_names
   create                  = true
   create_repository       = true
-  create_lifecycle_policy = true
+  create_lifecycle_policy = false
   repository_lifecycle_policy = jsonencode({
     rules = [
       {

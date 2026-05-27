@@ -19,6 +19,6 @@ terraform {
     encrypt      = true
     bucket       = "csoft-terraform-statefiles-dippanita"
     use_lockfile = true
-    key          = "terraform.tfstate"
+    key          = "env:/main/terraform.tfstate"
   }
 }
