@@ -1,42 +1,29 @@
-# locals {
-#   main_domain_name       = var.main_domain_name
-#   create_route53_records = var.create_route53_records
-#   validation_method      = var.validation_method
-#   acm_main_tags          = merge(var.acm_main_tags, { Name = local.main_domain_name })
-#   acm_zone_id            = "Z08321731XS1LUVSSIDLM"
-# }
-# module "acm_main" {
-#   source = "./modules/acm"
+####################################################################
+# ACM Certificate - holaamigoes.in
+####################################################################
 
-#   create_certificate = true
+locals {
+  main_domain_name = "holaamigoes.in"
+  acm_zone_id      = module.route53_public_zone.route53_zone_zone_id["holaamigoes.in"]
+  acm_main_tags = {
+    Environment = local.environment
+    Name        = "holaamigoes.in"
+  }
+}
 
-#   zone_id = local.acm_zone_id
+module "acm_main" {
+  source = "./modules/acm"
 
-#   domain_name               = local.main_domain_name
-#   subject_alternative_names = ["*.${local.main_domain_name}"]
-#   create_route53_records    = local.create_route53_records
-#   validation_method         = local.validation_method
+  create_certificate = true
 
-#   validate_certificate = true
+  zone_id = local.acm_zone_id
 
-#   tags = local.acm_main_tags
-# }
+  domain_name               = "*.${local.main_domain_name}"
+  subject_alternative_names = [local.main_domain_name]
+  create_route53_records    = true
+  validation_method         = "DNS"
 
-# # module "acm_nv" {
-# #   source = "./modules/acm"
+  validate_certificate = true
 
-# #   create_certificate = true
-
-# #   domain_name               = local.main_domain_name
-# #   subject_alternative_names = ["*.${local.main_domain_name}"]
-# #   create_route53_records    = false #local.create_route53_records
-# #   validation_method         = local.validation_method
-
-# #   validate_certificate = false
-
-# #   tags = local.acm_main_tags
-
-# #   providers = {
-# #     aws = aws.virginia
-# #   }
-# # }
+  tags = local.acm_main_tags
+}
