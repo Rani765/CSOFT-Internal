@@ -112,7 +112,7 @@ module "autoscaling" {
   block_device_mappings           = each.value.block_device_mappings
   ebs_optimized                   = true
   ignore_desired_capacity_changes = false
-  key_name                        = local.ecs_node_kp_name
+  key_name                        = module.keypair_ecs_node.key_pair_name
 
   create_iam_instance_profile = true
   iam_role_name               = "CSoft-Prod-ECS-Node-Role"
@@ -153,7 +153,6 @@ resource "aws_iam_policy" "node_additional" {
         "Condition" : {
           "StringEquals" : {
             "aws:RequestedRegion" : [
-              "ap-south-1",
               "us-east-1"
             ]
           }

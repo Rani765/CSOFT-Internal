@@ -213,9 +213,9 @@ resource "aws_ecr_repository" "this" {
 #   policy     = var.create_repository_policy ? data.aws_iam_policy_document.repository[0].json : var.repository_policy
 # }
 resource "aws_ecr_repository_policy" "this" {
-  for_each = local.create_private_repository && var.attach_repository_policy ? { for i, repo in aws_ecr_repository.this : i => repo } : {}
+  for_each = local.create_private_repository && var.attach_repository_policy ? { for name in var.repository_names : name => name } : {}
 
-  repository = each.value.name
+  repository = each.value
   policy     = var.create_repository_policy ? data.aws_iam_policy_document.repository[0].json : var.repository_policy
 }
 ################################################################################
@@ -230,9 +230,9 @@ resource "aws_ecr_repository_policy" "this" {
 # }
 
 resource "aws_ecr_lifecycle_policy" "this" {
-  for_each = local.create_private_repository && var.create_lifecycle_policy ? { for i, repo in aws_ecr_repository.this : i => repo } : {}
+  for_each = local.create_private_repository && var.create_lifecycle_policy ? { for name in var.repository_names : name => name } : {}
 
-  repository = each.value.name
+  repository = each.value
   policy     = var.repository_lifecycle_policy
 }
 

@@ -1,9 +1,53 @@
 module "frontend_website" {
   source = "./modules/s3"
-  bucket = "csoft-wiseindex-app-prod"
+  bucket = "csoft-wiseindex-app-prod-use1"
   #attach_policy   = true
   #policy        = jsonencode()
   force_destroy = true
+}
+
+####################################################################
+# Upload index.html to S3
+####################################################################
+
+resource "aws_s3_object" "index_html" {
+  bucket       = "csoft-wiseindex-app-prod-use1"
+  key          = "index.html"
+  source       = "${path.module}/scripts/index.html"
+  content_type = "text/html"
+  etag         = filemd5("${path.module}/scripts/index.html")
+
+  depends_on = [module.frontend_website]
+}
+
+####################################################################
+# S3 Bucket Policy for CloudFront OAC
+####################################################################
+
+resource "aws_s3_bucket_policy" "frontend_oac" {
+  bucket = "csoft-wiseindex-app-prod-use1"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid       = "AllowCloudFrontServicePrincipal"
+        Effect    = "Allow"
+        Principal = {
+          Service = "cloudfront.amazonaws.com"
+        }
+        Action   = "s3:GetObject"
+        Resource = "arn:aws:s3:::csoft-wiseindex-app-prod-use1/*"
+        Condition = {
+          StringEquals = {
+            "AWS:SourceArn" = module.cloudfront_frontend.cloudfront_distribution_arn
+          }
+        }
+      }
+    ]
+  })
+
+  depends_on = [module.frontend_website, module.cloudfront_frontend]
 }
 
 module "cloudfront_frontend" {

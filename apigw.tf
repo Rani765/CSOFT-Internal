@@ -1,5 +1,5 @@
 locals {
-  alb_listener_arn = "arn:aws:elasticloadbalancing:ap-south-1:024848447708:listener/app/Csoft-prod-alb/5fc1dd795c5839cb/b81bf5f7f5678f06"
+  alb_listener_arn = "arn:aws:elasticloadbalancing:us-east-1:024848447708:listener/app/Csoft-prod-alb/5fc1dd795c5839cb/b81bf5f7f5678f06"
 }
 module "apigw-vpc-link-securtiy-group" {
   source      = "./modules/sg"

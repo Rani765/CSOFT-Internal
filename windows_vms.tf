@@ -24,7 +24,7 @@ module "ec2_ocapp" {
   availability_zone           = element(module.vpc.azs, 0)
   subnet_id                   = element(module.vpc.private_subnets, 0)
   vpc_security_group_ids      = [module.ocapp-securtiy-group.security_group_id]
-  key_name                    = data.aws_key_pair.ocapp.key_name
+  key_name                    = module.keypair_ocapp.key_pair_name
   associate_public_ip_address = false
   disable_api_stop            = false
   disable_api_termination     = local.ec2_ocapp_disable_api_termination
@@ -32,7 +32,7 @@ module "ec2_ocapp" {
   source_dest_check           = false
 
   create_iam_instance_profile = false
-  iam_instance_profile        = local.ec2_ocapp_iam_instance_profile
+  iam_instance_profile        = aws_iam_instance_profile.cwm_managed_instance_profile.name
 
 
   enable_volume_tags = false
@@ -49,9 +49,9 @@ module "ec2_ocapp" {
   ]
 
   user_data = <<-EOF
-    #!/bin/bash
-    sudo systemctl start snap.amazon-ssm-agent.amazon-ssm-agent.service
-    sudo systemctl status snap.amazon-ssm-agent.amazon-ssm-agent.service
+    <powershell>
+    Start-Service AmazonSSMAgent
+    </powershell>
   EOF 
 
   tags = local.ec2_ocapp_tags
@@ -83,7 +83,7 @@ module "ec2_ocdb" {
   availability_zone           = element(module.vpc.azs, 0)
   subnet_id                   = element(module.vpc.private_subnets, 0)
   vpc_security_group_ids      = [module.ocdb-securtiy-group.security_group_id]
-  key_name                    = data.aws_key_pair.ocdb.key_name
+  key_name                    = module.keypair_ocdb.key_pair_name
   associate_public_ip_address = false
   disable_api_stop            = false
   disable_api_termination     = local.ec2_ocdb_disable_api_termination
@@ -91,7 +91,7 @@ module "ec2_ocdb" {
   source_dest_check           = false
 
   create_iam_instance_profile = false
-  iam_instance_profile        = local.ec2_ocdb_iam_instance_profile
+  iam_instance_profile        = aws_iam_instance_profile.cwm_managed_instance_profile.name
 
 
   enable_volume_tags = false
@@ -108,9 +108,9 @@ module "ec2_ocdb" {
   ]
 
   user_data = <<-EOF
-    #!/bin/bash
-    sudo systemctl start snap.amazon-ssm-agent.amazon-ssm-agent.service
-    sudo systemctl status snap.amazon-ssm-agent.amazon-ssm-agent.service
+    <powershell>
+    Start-Service AmazonSSMAgent
+    </powershell>
   EOF 
   tags      = local.ec2_ocdb_tags
 }

@@ -15,9 +15,9 @@ terraform {
   }
 
   backend "s3" {
-    region       = "ap-south-1"
+    region       = "us-east-1"
     encrypt      = true
-    bucket       = "csoft-terraform-statefiles"
+    bucket       = "csoft-terraform-statefiles-dippanita"
     use_lockfile = true
     key          = "terraform.tfstate"
   }

@@ -1,10 +1,10 @@
-region_backend = "ap-south-1"
+region_backend = "us-east-1"
 ########################################
 # VPC
 ########################################
 environment          = "prod"
 vpc_cidr             = "10.189.0.0/16"
-region               = "ap-south-1"
+region               = "us-east-1"
 vpc_name             = "csoft"
 single_nat_gateway   = "true"
 enable_nat_gateway   = "true"
@@ -17,12 +17,12 @@ vpc_tags = {
   "Project"       = "Csoft"
   "Layer"         = "Gateway"
 }
-vpc_flowlog_bucket = "csoft-prod-vpcflowlog"
+vpc_flowlog_bucket = "csoft-prod-vpcflowlog-use1"
 
 ########################################
 # Pritunl
 ########################################
-cred_bucketName = "csoft-prod-credentials"
+cred_bucketName = "csoft-prod-credentials-use1"
 bucketTags = {
   "Implementedby" = "Workmates",
   "Managedby"     = "Csoft",
@@ -30,7 +30,7 @@ bucketTags = {
   "Project"       = "Csoft",
   "Layer"         = "Storage"
 }
-ec2_pritunl_ami_id        = "ami-0b09627181c8d5778"
+ec2_pritunl_ami_id        = "ami-0236922087fa98b6e"
 ec2_pritunl_instance_type = "t3a.micro"
 ec2_pritunl_name          = "PRITUNL"
 #ec2_pritunl_iam_role_name = "CWMManagedInstanceRole"
@@ -110,23 +110,23 @@ kms_tags = {
   "Layer"         = "Security"
 }
 key_administrators_list = [
-  "arn:aws:iam::024848447708:role/Workmates-SSO-AdminRole",
-  "arn:aws:iam::024848447708:role/Workmates-SSO-L2SupportRole",
-  "arn:aws:iam::024848447708:role/Terraform-deployer-role"
+  "arn:aws:iam::675169529857:role/Workmates-SSO-AdminRole",
+  "arn:aws:iam::675169529857:role/Workmates-SSO-L2SupportRole",
+  "arn:aws:iam::675169529857:role/Terraform-deployer-role"
 ]
 key_user_list = [
-  "arn:aws:iam::024848447708:role/Workmates-SSO-AdminRole",
-  "arn:aws:iam::024848447708:role/Workmates-SSO-L2SupportRole",
-  "arn:aws:iam::024848447708:role/Terraform-deployer-role",
-  "arn:aws:iam::024848447708:role/CWMManagedInstanceRole",
-  "arn:aws:iam::024848447708:role/CSoft-Prod-ECS-Node-Role",
-  "arn:aws:iam::024848447708:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
+  "arn:aws:iam::675169529857:role/Workmates-SSO-AdminRole",
+  "arn:aws:iam::675169529857:role/Workmates-SSO-L2SupportRole",
+  "arn:aws:iam::675169529857:role/Terraform-deployer-role",
+  "arn:aws:iam::675169529857:role/CWMManagedInstanceRole",
+  "arn:aws:iam::675169529857:role/CSoft-Prod-ECS-Node-Role",
+  "arn:aws:iam::675169529857:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
 ]
 key_aliases                 = ["CSOFT-PROD-CMK"]
 key_description             = "Csoft Prod Customer managed Key"
 key_deletion_window_in_days = 7
 key_usage                   = "ENCRYPT_DECRYPT"
-kms_region                  = "ap-south-1"
+kms_region                  = "us-east-1"
 enable_multi_region         = false
 enable_key_rotation         = false
 enable_key                  = true
@@ -214,7 +214,8 @@ repository_names = [
   "csoft-prod-jobserver",
   "csoft-prod-solr-efs",
   "csoft-prod-tika-server",
-  "csoft-prod-wiseindex/wiapi",
+  "csoft-prod-wiseindex",
+  "csoft-prod-wiapi",
   "cosft-prod-zookeeper"
 ]
 
@@ -273,7 +274,7 @@ iam_policy = {
         "cloudfront:CreateInvalidation"
       ],
       "Resource" : [
-        "arn:aws:cloudfront::024848447708:distribution/*"
+        "arn:aws:cloudfront::675169529857:distribution/*"
       ]
     },
     {
@@ -303,7 +304,7 @@ iam_policy_tags = {
 ########################################
 # ocapp
 ########################################
-ec2_ocapp_ami_id        = "ami-04c72f0698ef00511"
+ec2_ocapp_ami_id        = "ami-073ed03c725f813eb"
 ec2_ocapp_instance_type = "t3a.medium"
 ec2_ocapp_name          = "OCApp"
 #ec2_ocapp_iam_role_name = "CWMManagedInstanceRole"
@@ -344,7 +345,7 @@ ec2_ocapp_egress_rules = [{
 ########################################
 # ocdb
 ########################################
-ec2_ocdb_ami_id        = "ami-013af302caec5a522"
+ec2_ocdb_ami_id        = "ami-073ed03c725f813eb"
 ec2_ocdb_instance_type = "t3a.medium"
 ec2_ocdb_name          = "OC-DB"
 #ec2_ocdb_iam_role_name = "CWMManagedInstanceRole"
@@ -365,15 +366,15 @@ ec2_ocdb_iam_instance_profile   = "CWMManagedInstanceRole"
 ec2_ocdb_ingress_rules = [
   {
     cidr_blocks = ["10.189.0.0/16"]
-    from_port   = 1443
+    from_port   = 1433
     protocol    = "tcp"
-    to_port     = 1443
+    to_port     = 1433
   },
   {
     cidr_blocks = ["10.189.0.0/16"]
-    from_port   = 3389
+    from_port   = 3339
     protocol    = "tcp"
-    to_port     = 3389
+    to_port     = 3339
   },
 
 ]

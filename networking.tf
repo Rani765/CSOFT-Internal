@@ -91,7 +91,7 @@ module "ec2_pritunl" {
   availability_zone           = element(module.vpc.azs, 0)
   subnet_id                   = element(module.vpc.public_subnets, 0)
   vpc_security_group_ids      = [module.pritunl-securtiy-group.security_group_id]
-  key_name                    = data.aws_key_pair.pritunl.key_name
+  key_name                    = module.keypair_pritunl.key_pair_name
   associate_public_ip_address = true
   disable_api_stop            = false
   disable_api_termination     = local.ec2_pritunl_disable_api_termination
@@ -99,7 +99,7 @@ module "ec2_pritunl" {
   source_dest_check           = false
 
   create_iam_instance_profile = false
-  iam_instance_profile        = local.ec2_pritunl_iam_instance_profile
+  iam_instance_profile        = aws_iam_instance_profile.cwm_managed_instance_profile.name
 
 
   enable_volume_tags = false
@@ -156,4 +156,6 @@ resource "aws_s3_bucket" "credential-bucket" {
 
   tags = local.bucketTags
 }
+
+
 

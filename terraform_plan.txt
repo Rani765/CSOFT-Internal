@@ -1,0 +1,592 @@
+[0m[1mmodule.keypair_zookeeper.tls_private_key.this[0]: Refreshing state... [id=82d661bc43342565b83f9db83360a6dbaf2b1b81][0m
+[0m[1mmodule.keypair_ocapp.tls_private_key.this[0]: Refreshing state... [id=7e8649fa0a7a5068cab53b1a79c89d0e865ae80a][0m
+[0m[1mmodule.keypair_ecs_node.tls_private_key.this[0]: Refreshing state... [id=5227d312d1925a8db409c9d216a23be0bdf795cc][0m
+[0m[1mmodule.keypair_ocdb.tls_private_key.this[0]: Refreshing state... [id=527ad091c1b26ec222ca80251a1589e4eeac5efd][0m
+[0m[1mmodule.keypair_pritunl.tls_private_key.this[0]: Refreshing state... [id=86cfa9c657641c9b3649b7f19dc60d4343c8f697][0m
+[0m[1mmodule.vpc-flowlog-bucket.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.frontend_website.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.keypair_ocapp.aws_key_pair.this[0]: Refreshing state... [id=Csoft-OCApp-1b-keypair][0m
+[0m[1mdata.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.s3_env_bucket.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.waf.module.alb_waf_logging.data.aws_partition.current: Reading...[0m[0m
+[0m[1maws_iam_policy.node_additional: Refreshing state... [id=arn:aws:iam::675169529857:policy/CSoft-prod-cluster-additional][0m
+[0m[1mmodule.waf.module.alb_waf_logging.aws_s3_bucket.this[0]: Refreshing state... [id=csoft-prod-waf-logs-use1][0m
+[0m[1mmodule.vpc-flowlog-bucket.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.frontend_website.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.waf.module.alb_waf_logging.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.s3_env_bucket.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mdata.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mdata.aws_partition.current: Reading...[0m[0m
+[0m[1maws_iam_role.cwm_managed_instance_role: Refreshing state... [id=CWMManagedInstanceRole][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_lifecycle_policy.this["csoft-prod-solr-efs"]: Refreshing state... [id=csoft-prod-solr-efs][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_lifecycle_policy.this["csoft-prod-tika-server"]: Refreshing state... [id=csoft-prod-tika-server][0m
+[0m[1mmodule.waf.module.alb_waf_logging.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.ecr_repositories.aws_ecr_lifecycle_policy.this["csoft-prod-jobserver"]: Refreshing state... [id=csoft-prod-jobserver][0m
+[0m[1mdata.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.waf.module.alb_waf_logging.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_lifecycle_policy.this["csoft-prod-wiseindex/wiapi"]: Refreshing state... [id=csoft-prod-wiseindex/wiapi][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_lifecycle_policy.this["cosft-prod-zookeeper"]: Refreshing state... [id=cosft-prod-zookeeper][0m
+[0m[1mmodule.waf.aws_wafv2_web_acl.alb-acl-main: Refreshing state... [id=4add1910-3bd2-4858-9ef5-8d852a5676ec][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_lifecycle_policy.this["csoft-prod-identity-server"]: Refreshing state... [id=csoft-prod-identity-server][0m
+[0m[1mdata.aws_availability_zones.available: Reading...[0m[0m
+[0m[1mmodule.vpc-flowlog-bucket.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.waf.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.frontend_website.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.vpc-flowlog-bucket.aws_s3_bucket.this[0]: Refreshing state... [id=csoft-prod-vpcflowlog-use1][0m
+[0m[1mmodule.vpc-flowlog-bucket.data.aws_caller_identity.current: Read complete after 1s [id=675169529857][0m
+[0m[1mdata.aws_availability_zones.available: Read complete after 1s [id=us-east-1][0m
+[0m[1mmodule.alb.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.kms_complete.data.aws_caller_identity.current[0]: Reading...[0m[0m
+[0m[1mmodule.alb.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1maws_ecs_account_setting_default.defaults["awsvpcTrunking"]: Refreshing state... [id=arn:aws:iam::675169529857:root][0m
+[0m[1mmodule.vpc-flowlog-bucket.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.vpc-flowlog-bucket.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mdata.aws_ami.ubuntu: Reading...[0m[0m
+[0m[1mmodule.alb-pub.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.alb-pub.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.frontend_website.aws_s3_bucket.this[0]: Refreshing state... [id=csoft-wiseindex-app-prod-use1][0m
+[0m[1mmodule.waf.data.aws_caller_identity.current: Read complete after 1s [id=675169529857][0m
+[0m[1mmodule.keypair_pritunl.aws_key_pair.this[0]: Refreshing state... [id=Csoft-Pritunl-VPN-1b-keypair][0m
+[0m[1mmodule.frontend_website.data.aws_caller_identity.current: Read complete after 1s [id=675169529857][0m
+[0m[1mmodule.keypair_zookeeper.aws_key_pair.this[0]: Refreshing state... [id=Csoft-Zookeeper-keypair][0m
+[0m[1mmodule.kms_complete.data.aws_partition.current[0]: Reading...[0m[0m
+[0m[1mmodule.kms_complete.data.aws_partition.current[0]: Read complete after 0s [id=aws][0m
+[0m[1mmodule.s3_env_bucket.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.kms_complete.data.aws_caller_identity.current[0]: Read complete after 0s [id=675169529857][0m
+[0m[1mmodule.frontend_website.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.frontend_website.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.ecr_repositories.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.ecr_repositories.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.ecr_repositories.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.waf.module.alb_waf_logging.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.waf.module.alb_waf_logging.data.aws_caller_identity.current: Read complete after 0s [id=675169529857][0m
+[0m[1mmodule.s3_env_bucket.data.aws_caller_identity.current: Read complete after 1s [id=675169529857][0m
+[0m[1mmodule.ecr_repositories.data.aws_caller_identity.current: Read complete after 0s [id=675169529857][0m
+[0m[1mdata.aws_ami.ubuntu: Read complete after 1s [id=ami-0fc0d6e8d70ab2d42][0m
+[0m[1mdata.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.waf.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.s3_env_bucket.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.waf.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.s3_env_bucket.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1maws_s3_bucket.credential-bucket: Refreshing state... [id=csoft-prod-credentials-use1][0m
+[0m[1mmodule.keypair_ocdb.aws_key_pair.this[0]: Refreshing state... [id=Csoft-OCDB-1b-keypair][0m
+[0m[1mmodule.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0a57c58e24389d5d2][0m
+[0m[1mdata.aws_iam_policy_document.flow_log_s3: Reading...[0m[0m
+[0m[1mdata.aws_iam_policy_document.flow_log_s3: Read complete after 0s [id=743456574][0m
+[0m[1mdata.aws_ssm_parameter.ecs_optimized_ami: Reading...[0m[0m
+[0m[1mdata.aws_caller_identity.current: Read complete after 0s [id=675169529857][0m
+[0m[1mmodule.keypair_ecs_node.aws_key_pair.this[0]: Refreshing state... [id=CSoft-ECS-Node-keypair][0m
+[0m[1maws_iam_instance_profile.cwm_managed_instance_profile: Refreshing state... [id=CWMManagedInstanceRole][0m
+[0m[1maws_iam_role_policy_attachment.cwm_ssm_core: Refreshing state... [id=CWMManagedInstanceRole-20260525131010885000000002][0m
+[0m[1maws_iam_role_policy_attachment.cwm_cloudwatch: Refreshing state... [id=CWMManagedInstanceRole-20260525131011023500000003][0m
+[0m[1maws_iam_role_policy_attachment.cwm_s3_read: Refreshing state... [id=CWMManagedInstanceRole-20260525131010865300000001][0m
+[0m[1mdata.aws_ssm_parameter.ecs_optimized_ami: Read complete after 1s [id=/aws/service/ecs/optimized-ami/amazon-linux-2023/recommended][0m
+[0m[1mmodule.ecr_repositories.data.aws_iam_policy_document.repository[0]: Reading...[0m[0m
+[0m[1mmodule.ecr_repositories.data.aws_iam_policy_document.repository[0]: Read complete after 0s [id=1534240747][0m
+[0m[1mmodule.waf.data.aws_iam_policy_document.waf_logs_s3: Reading...[0m[0m
+[0m[1mmodule.waf.data.aws_iam_policy_document.waf_logs_s3: Read complete after 0s [id=1154070979][0m
+[0m[1mdata.aws_iam_policy_document.log-delivery: Reading...[0m[0m
+[0m[1mdata.aws_iam_policy_document.log-delivery: Read complete after 0s [id=3177232677][0m
+[0m[1mmodule.kms_complete.data.aws_iam_policy_document.this[0]: Reading...[0m[0m
+[0m[1mmodule.kms_complete.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=1732132188][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository_policy.this["csoft-prod-solr-efs"]: Refreshing state... [id=csoft-prod-solr-efs][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository_policy.this["cosft-prod-zookeeper"]: Refreshing state... [id=cosft-prod-zookeeper][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository_policy.this["csoft-prod-tika-server"]: Refreshing state... [id=csoft-prod-tika-server][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository_policy.this["csoft-prod-identity-server"]: Refreshing state... [id=csoft-prod-identity-server][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository_policy.this["csoft-prod-jobserver"]: Refreshing state... [id=csoft-prod-jobserver][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository_policy.this["csoft-prod-wiseindex/wiapi"]: Refreshing state... [id=csoft-prod-wiseindex/wiapi][0m
+[0m[1mmodule.kms_complete.aws_kms_key.this[0]: Refreshing state... [id=369454d8-d2ff-40d7-bb07-1d959690487c][0m
+[0m[1mmodule.s3_env_bucket.data.aws_iam_policy_document.combined[0]: Reading...[0m[0m
+[0m[1mmodule.s3_env_bucket.data.aws_iam_policy_document.combined[0]: Read complete after 0s [id=3177232677][0m
+[0m[1mmodule.waf.module.alb_waf_logging.aws_s3_bucket_public_access_block.this[0]: Refreshing state... [id=csoft-prod-waf-logs-use1][0m
+[0m[1mmodule.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0246ca3ba7666aa46][0m
+[0m[1mmodule.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-07d5915613ba09803][0m
+[0m[1mmodule.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0ff5beacb1f4c2591][0m
+[0m[1mmodule.asg_security_group.aws_security_group.this: Refreshing state... [id=sg-0528bd90cf873bb08][0m
+[0m[1mmodule.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-0123d278abda83500][0m
+[0m[1mmodule.pritunl-securtiy-group.aws_security_group.this: Refreshing state... [id=sg-03017368b4b65b608][0m
+[0m[1mmodule.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-095257be3f72008e5][0m
+[0m[1mmodule.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-04d041cc194142176][0m
+[0m[1mmodule.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0d0228428dc12b46e][0m
+[0m[1mmodule.efs-security-group.aws_security_group.this: Refreshing state... [id=sg-069f6f5c6ac112b23][0m
+[0m[1mmodule.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0e228cd114ccb371c][0m
+[0m[1mmodule.apigw-vpc-link-securtiy-group.aws_security_group.this: Refreshing state... [id=sg-01f12f3dd15d4a1c7][0m
+[0m[1mmodule.alb.aws_lb_target_group.this["solr_ecs"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:targetgroup/csoft-prod-solr-tg/5e979e5b0822520d][0m
+[0m[1mmodule.alb.aws_lb_target_group.this["tika_ecs"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:targetgroup/csoft-prod-tika-tgs/8e44a13e7a01f920][0m
+[0m[1mmodule.alb.aws_lb_target_group.this["wi_api_ecs"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:targetgroup/csoft-prod-wi-api-tg/3ecf4d3e49afe0e4][0m
+[0m[1mmodule.alb.aws_lb_target_group.this["identity_ecs"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:targetgroup/csoft-prod-identity-service-tg/6d7ad8c13f916989][0m
+[0m[1mmodule.alb.aws_lb_target_group.this["jobsrv_ecs"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:targetgroup/csoft-prod-jobservice-tg/b94e3204989403d4][0m
+[0m[1mmodule.zookeeper-security-group.aws_security_group.this: Refreshing state... [id=sg-042407a7941df1700][0m
+[0m[1mmodule.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-08dc441955cba4145][0m
+[0m[1mmodule.alb-pvt-securtiy-group.aws_security_group.this: Refreshing state... [id=sg-096759a3ed8128916][0m
+[0m[1mmodule.alb-pub.aws_lb_target_group.this["oc_app"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:targetgroup/csoft-prod-oc-app-tg/cb85e90bf0c2b0be][0m
+[0m[1mmodule.alb-pub-securtiy-group.aws_security_group.this: Refreshing state... [id=sg-0c2bc11c6c3bd60b9][0m
+[0m[1mmodule.vpc.aws_subnet.database[1]: Refreshing state... [id=subnet-071b3de7e42bee0ed][0m
+[0m[1mmodule.vpc.aws_subnet.database[2]: Refreshing state... [id=subnet-0db44ed3eddadcff8][0m
+[0m[1mmodule.vpc.aws_subnet.database[0]: Refreshing state... [id=subnet-04720234fa22773dd][0m
+[0m[1mmodule.route53_zone.aws_route53_zone.this["csoft.internal"]: Refreshing state... [id=Z06968852DAPXS9UA1ZWZ][0m
+[0m[1mmodule.ocdb-securtiy-group.aws_security_group.this: Refreshing state... [id=sg-0e7de96abe2c47052][0m
+[0m[1mmodule.ocapp-securtiy-group.aws_security_group.this: Refreshing state... [id=sg-0c165f565de995d64][0m
+[0m[1mmodule.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0ac52aa97588c22c4][0m
+[0m[1mmodule.kms_complete.aws_kms_alias.this["CSOFT-PROD-CMK"]: Refreshing state... [id=alias/CSOFT-PROD-CMK][0m
+[0m[1mmodule.vpc-flowlog-bucket.aws_s3_bucket_public_access_block.this[0]: Refreshing state... [id=csoft-prod-vpcflowlog-use1][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-04fac52e9e046eb8d][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0b55f4ca956d9ab0b][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-031522fac04ae712e][0m
+[0m[1mmodule.frontend_website.aws_s3_bucket_public_access_block.this[0]: Refreshing state... [id=csoft-wiseindex-app-prod-use1][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-057b313d5bd4ab430][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-011cad8b2dc1e1bb6][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-09c32e4d0698d99cf][0m
+[0m[1mmodule.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-08dc441955cba41451080289494][0m
+[0m[1mmodule.vpc.aws_route_table_association.database[1]: Refreshing state... [id=rtbassoc-0449f85c445c56eb4][0m
+[0m[1mmodule.vpc.aws_route_table_association.database[0]: Refreshing state... [id=rtbassoc-0478ceaeac8bb8b57][0m
+[0m[1mmodule.vpc.aws_route_table_association.database[2]: Refreshing state... [id=rtbassoc-0de8f69a160aba4de][0m
+[0m[1maws_efs_file_system.zookeeper: Refreshing state... [id=fs-056e6ee7ba8995d4f][0m
+[0m[1maws_apigatewayv2_vpc_link.this: Refreshing state... [id=cnruhz][0m
+[0m[1mmodule.alb.aws_lb.this[0]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:loadbalancer/app/Csoft-prod-alb/85dcba90a1201f32][0m
+[0m[1mmodule.alb-pub.aws_lb.this[0]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:loadbalancer/app/Csoft-prod-pub-alb/2ae2e2458d9e78f1][0m
+[0m[1mmodule.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-07fde843f647b2985][0m
+[0m[1mmodule.autoscaling["backend-ng"].data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.autoscaling["backend-ng"].data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository.this["csoft-prod-tika-server"]: Refreshing state... [id=csoft-prod-tika-server][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository.this["csoft-prod-wiseindex/wiapi"]: Refreshing state... [id=csoft-prod-wiseindex/wiapi][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository.this["cosft-prod-zookeeper"]: Refreshing state... [id=cosft-prod-zookeeper][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository.this["csoft-prod-jobserver"]: Refreshing state... [id=csoft-prod-jobserver][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository.this["csoft-prod-solr-efs"]: Refreshing state... [id=csoft-prod-solr-efs][0m
+[0m[1mmodule.ecr_repositories.aws_ecr_repository.this["csoft-prod-identity-server"]: Refreshing state... [id=csoft-prod-identity-server][0m
+[0m[1mmodule.ec2_pritunl.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.ec2_pritunl.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.vpc.aws_flow_log.this[0]: Refreshing state... [id=fl-05d10bcd06443fa87][0m
+[0m[1mmodule.ec2_ocdb.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.ec2_ocdb.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.ec2_ocapp.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.ec2_ocapp.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-095257be3f72008e51080289494][0m
+[0m[1mmodule.vpc_endpoints.data.aws_vpc_endpoint_service.this["s3"]: Reading...[0m[0m
+[0m[1mmodule.autoscaling["backend-ng"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+[0m[1mmodule.autoscaling["backend-ng"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=1256122602][0m
+[0m[1maws_apigatewayv2_api.this: Refreshing state... [id=gza7nxoev0][0m
+[0m[1mmodule.cloudfront_frontend.data.aws_cloudfront_origin_request_policy.this["Managed-CORS-S3Origin"]: Reading...[0m[0m
+[0m[1mmodule.cloudfront_frontend.data.aws_cloudfront_cache_policy.this["Managed-CachingOptimized"]: Reading...[0m[0m
+[0m[1mmodule.autoscaling["backend-ng"].aws_iam_role.this[0]: Refreshing state... [id=CSoft-Prod-ECS-Node-Role][0m
+[0m[1mmodule.ec2_pritunl.aws_instance.this[0]: Refreshing state... [id=i-039897326577acee5][0m
+[0m[1mmodule.ec2_ocapp.aws_instance.this[0]: Refreshing state... [id=i-00c9f56988b0a096e][0m
+[0m[1mmodule.ec2_ocdb.aws_instance.this[0]: Refreshing state... [id=i-09852422ecc73dee0][0m
+[0m[1maws_efs_mount_target.zookeeper[2]: Refreshing state... [id=fsmt-0391a71d88940c6ff][0m
+[0m[1maws_efs_mount_target.zookeeper[1]: Refreshing state... [id=fsmt-0b1ab4ad0d07d2020][0m
+[0m[1mmodule.vpc_endpoints.data.aws_vpc_endpoint_service.this["s3"]: Read complete after 0s [id=195798706][0m
+[0m[1maws_efs_mount_target.zookeeper[0]: Refreshing state... [id=fsmt-010d728c28a3abaea][0m
+[0m[1mmodule.alb.aws_lb_listener.this["http"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:listener/app/Csoft-prod-alb/85dcba90a1201f32/01e25d4fb8ab2ddf][0m
+[0m[1mmodule.ec2_zookeeper[2].data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.ec2_zookeeper[2].data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.ec2_zookeeper[1].data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.ec2_zookeeper[1].data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.ec2_zookeeper[0].data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.ec2_zookeeper[0].data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.vpc_endpoints.aws_vpc_endpoint.this["s3"]: Refreshing state... [id=vpce-0d5049239d4d156fa][0m
+[0m[1mmodule.alb-pub.aws_lb_listener.this["http"]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:675169529857:listener/app/Csoft-prod-pub-alb/2ae2e2458d9e78f1/6969a11197473bad][0m
+[0m[1mmodule.autoscaling["backend-ng"].aws_iam_instance_profile.this[0]: Refreshing state... [id=CSoft-Prod-ECS-Node-Role][0m
+[0m[1mmodule.autoscaling["backend-ng"].aws_iam_role_policy_attachment.this["AmazonEC2ContainerServiceforEC2Role"]: Refreshing state... [id=CSoft-Prod-ECS-Node-Role-20260525125942673400000003][0m
+[0m[1mmodule.autoscaling["backend-ng"].aws_iam_role_policy_attachment.this["AmazonSSMManagedInstanceCore"]: Refreshing state... [id=CSoft-Prod-ECS-Node-Role-20260525125942270600000002][0m
+[0m[1mmodule.autoscaling["backend-ng"].aws_iam_role_policy_attachment.this["additional"]: Refreshing state... [id=CSoft-Prod-ECS-Node-Role-20260525125942270600000001][0m
+[0m[1mmodule.cloudfront_frontend.data.aws_cloudfront_origin_request_policy.this["Managed-CORS-S3Origin"]: Read complete after 1s [id=88a5eaf4-2fd4-4709-b370-b4c650ea3fcf][0m
+[0m[1mmodule.cloudfront_frontend.data.aws_cloudfront_cache_policy.this["Managed-CachingOptimized"]: Read complete after 1s [id=658327ea-f89d-4fab-a63d-7e88639e58f6][0m
+[0m[1mmodule.waf.aws_wafv2_web_acl_association.alb_associations["private-alb"]: Refreshing state... [id=arn:aws:wafv2:us-east-1:675169529857:regional/webacl/CSoft-Prod-WAF/4add1910-3bd2-4858-9ef5-8d852a5676ec,arn:aws:elasticloadbalancing:us-east-1:675169529857:loadbalancer/app/Csoft-prod-alb/85dcba90a1201f32][0m
+[0m[1mmodule.waf.aws_wafv2_web_acl_association.alb_associations["public-alb"]: Refreshing state... [id=arn:aws:wafv2:us-east-1:675169529857:regional/webacl/CSoft-Prod-WAF/4add1910-3bd2-4858-9ef5-8d852a5676ec,arn:aws:elasticloadbalancing:us-east-1:675169529857:loadbalancer/app/Csoft-prod-pub-alb/2ae2e2458d9e78f1][0m
+[0m[1mmodule.ec2_zookeeper[1].aws_instance.this[0]: Refreshing state... [id=i-02cad3f85ea14243a][0m
+[0m[1mmodule.ec2_zookeeper[2].aws_instance.this[0]: Refreshing state... [id=i-074d8ce1e3e316776][0m
+[0m[1mmodule.ec2_zookeeper[0].aws_instance.this[0]: Refreshing state... [id=i-0283a99e3868dcfcc][0m
+[0m[1mmodule.ecs_cluster.data.aws_iam_policy_document.task_exec_assume[0]: Reading...[0m[0m
+[0m[1mmodule.ecs_cluster.data.aws_iam_policy_document.task_exec_assume[0]: Read complete after 0s [id=2291109037][0m
+[0m[1mmodule.ecs_cluster.aws_ecs_cluster.this[0]: Refreshing state... [id=arn:aws:ecs:us-east-1:675169529857:cluster/CSoft-prod-cluster][0m
+[0m[1mmodule.autoscaling["backend-ng"].aws_launch_template.this[0]: Refreshing state... [id=lt-0372e5d8349a0e42e][0m
+[0m[1mmodule.ecs_cluster.data.aws_iam_policy_document.task_exec[0]: Reading...[0m[0m
+[0m[1mmodule.ecs_cluster.data.aws_iam_policy_document.task_exec[0]: Read complete after 0s [id=1415633931][0m
+[0m[1mmodule.ecs_cluster.aws_iam_role.task_exec[0]: Refreshing state... [id=CSoft-prod-cluster][0m
+[0m[1mmodule.ecs_cluster.aws_iam_policy.task_exec[0]: Refreshing state... [id=arn:aws:iam::675169529857:policy/CSoft-prod-cluster][0m
+[0m[1mmodule.autoscaling["backend-ng"].aws_autoscaling_group.this[0]: Refreshing state... [id=CSoft-Prod-Ecs-Ng-Asg-backend-ng][0m
+[0m[1mmodule.ecs_cluster.aws_iam_role_policy_attachment.task_exec[0]: Refreshing state... [id=CSoft-prod-cluster-20260525125620967500000001][0m
+[0m[1mmodule.ecs_cluster.aws_ecs_capacity_provider.this["backend-ng"]: Refreshing state... [id=arn:aws:ecs:us-east-1:675169529857:capacity-provider/backend-ng][0m
+[0m[1maws_eip.vpn-eip: Refreshing state... [id=eipalloc-0edcce03f4b4824c7][0m
+[0m[1mmodule.ecs_cluster.aws_ecs_cluster_capacity_providers.this[0]: Refreshing state... [id=CSoft-prod-cluster][0m
+[0m[1mmodule.route53_zookeeper_records.data.aws_route53_zone.this[0]: Reading...[0m[0m
+[0m[1mmodule.route53_zookeeper_records.data.aws_route53_zone.this[0]: Read complete after 2s [id=Z06968852DAPXS9UA1ZWZ][0m
+[0m[1mmodule.route53_zookeeper_records.aws_route53_record.this["zk1 A"]: Refreshing state... [id=Z06968852DAPXS9UA1ZWZ_zk1.csoft.internal_A][0m
+[0m[1mmodule.route53_zookeeper_records.aws_route53_record.this["zk3 A"]: Refreshing state... [id=Z06968852DAPXS9UA1ZWZ_zk3.csoft.internal_A][0m
+[0m[1mmodule.route53_zookeeper_records.aws_route53_record.this["zk2 A"]: Refreshing state... [id=Z06968852DAPXS9UA1ZWZ_zk2.csoft.internal_A][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+  [33m~[0m update in-place[0m
+
+Terraform will perform the following actions:
+
+[1m  # aws_apigatewayv2_api.this[0m will be updated in-place
+[0m  [33m~[0m[0m resource "aws_apigatewayv2_api" "this" {
+        id                           = "gza7nxoev0"
+        name                         = "csoft-prod-wiapi-gt"
+        tags                         = {}
+      [33m~[0m[0m tags_all                     = {
+          [32m+[0m[0m "Environment"   = "Prod"
+          [32m+[0m[0m "Implementedby" = "Workmates"
+          [32m+[0m[0m "Managedby"     = "Csoft"
+          [32m+[0m[0m "Project"       = "Csoft"
+        }
+      [31m-[0m[0m version                      = "2025-07-02 10:15:12UTC" [90m-> null[0m[0m
+        [90m# (10 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_s3_bucket_policy.frontend_oac[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket_policy" "frontend_oac" {
+      [32m+[0m[0m bucket = "csoft-wiseindex-app-prod-use1"
+      [32m+[0m[0m id     = (known after apply)
+      [32m+[0m[0m policy = (known after apply)
+    }
+
+[1m  # aws_s3_object.index_html[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_object" "index_html" {
+      [32m+[0m[0m acl                    = (known after apply)
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m bucket                 = "csoft-wiseindex-app-prod-use1"
+      [32m+[0m[0m bucket_key_enabled     = (known after apply)
+      [32m+[0m[0m checksum_crc32         = (known after apply)
+      [32m+[0m[0m checksum_crc32c        = (known after apply)
+      [32m+[0m[0m checksum_crc64nvme     = (known after apply)
+      [32m+[0m[0m checksum_sha1          = (known after apply)
+      [32m+[0m[0m checksum_sha256        = (known after apply)
+      [32m+[0m[0m content_type           = "text/html"
+      [32m+[0m[0m etag                   = "1ce970291b4b058cf8f284d4e4b30356"
+      [32m+[0m[0m force_destroy          = false
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m key                    = "index.html"
+      [32m+[0m[0m kms_key_id             = (known after apply)
+      [32m+[0m[0m server_side_encryption = (known after apply)
+      [32m+[0m[0m source                 = "./scripts/index.html"
+      [32m+[0m[0m storage_class          = (known after apply)
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "Environment"   = "Prod"
+          [32m+[0m[0m "Implementedby" = "Workmates"
+          [32m+[0m[0m "Managedby"     = "Csoft"
+          [32m+[0m[0m "Project"       = "Csoft"
+        }
+      [32m+[0m[0m version_id             = (known after apply)
+    }
+
+[1m  # module.cloudfront_frontend.aws_cloudfront_distribution.this[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_cloudfront_distribution" "this" {
+      [32m+[0m[0m arn                             = (known after apply)
+      [32m+[0m[0m caller_reference                = (known after apply)
+      [32m+[0m[0m comment                         = "wiseindex.app Frontend prod"
+      [32m+[0m[0m continuous_deployment_policy_id = (known after apply)
+      [32m+[0m[0m default_root_object             = "index.html"
+      [32m+[0m[0m domain_name                     = (known after apply)
+      [32m+[0m[0m enabled                         = true
+      [32m+[0m[0m etag                            = (known after apply)
+      [32m+[0m[0m hosted_zone_id                  = (known after apply)
+      [32m+[0m[0m http_version                    = "http2"
+      [32m+[0m[0m id                              = (known after apply)
+      [32m+[0m[0m in_progress_validation_batches  = (known after apply)
+      [32m+[0m[0m is_ipv6_enabled                 = true
+      [32m+[0m[0m last_modified_time              = (known after apply)
+      [32m+[0m[0m price_class                     = "PriceClass_All"
+      [32m+[0m[0m retain_on_delete                = false
+      [32m+[0m[0m staging                         = false
+      [32m+[0m[0m status                          = (known after apply)
+      [32m+[0m[0m tags_all                        = {
+          [32m+[0m[0m "Environment"   = "Prod"
+          [32m+[0m[0m "Implementedby" = "Workmates"
+          [32m+[0m[0m "Managedby"     = "Csoft"
+          [32m+[0m[0m "Project"       = "Csoft"
+        }
+      [32m+[0m[0m trusted_key_groups              = (known after apply)
+      [32m+[0m[0m trusted_signers                 = (known after apply)
+      [32m+[0m[0m wait_for_deployment             = false
+
+      [32m+[0m[0m custom_error_response {
+          [32m+[0m[0m error_caching_min_ttl = 5
+          [32m+[0m[0m error_code            = 403
+          [32m+[0m[0m response_code         = 200
+          [32m+[0m[0m response_page_path    = "/index.html"
+        }
+
+      [32m+[0m[0m default_cache_behavior {
+          [32m+[0m[0m allowed_methods          = [
+              [32m+[0m[0m "DELETE",
+              [32m+[0m[0m "GET",
+              [32m+[0m[0m "HEAD",
+              [32m+[0m[0m "OPTIONS",
+              [32m+[0m[0m "PATCH",
+              [32m+[0m[0m "POST",
+              [32m+[0m[0m "PUT",
+            ]
+          [32m+[0m[0m cache_policy_id          = "658327ea-f89d-4fab-a63d-7e88639e58f6"
+          [32m+[0m[0m cached_methods           = [
+              [32m+[0m[0m "GET",
+              [32m+[0m[0m "HEAD",
+            ]
+          [32m+[0m[0m compress                 = true
+          [32m+[0m[0m default_ttl              = (known after apply)
+          [32m+[0m[0m max_ttl                  = (known after apply)
+          [32m+[0m[0m min_ttl                  = 0
+          [32m+[0m[0m origin_request_policy_id = "88a5eaf4-2fd4-4709-b370-b4c650ea3fcf"
+          [32m+[0m[0m target_origin_id         = "s3-website"
+          [32m+[0m[0m trusted_key_groups       = (known after apply)
+          [32m+[0m[0m trusted_signers          = (known after apply)
+          [32m+[0m[0m viewer_protocol_policy   = "redirect-to-https"
+
+          [32m+[0m[0m grpc_config (known after apply)
+        }
+
+      [32m+[0m[0m origin {
+          [32m+[0m[0m connection_attempts      = 3
+          [32m+[0m[0m connection_timeout       = 10
+          [32m+[0m[0m domain_name              = "csoft-wiseindex-app-prod-use1.s3.us-east-1.amazonaws.com"
+          [32m+[0m[0m origin_access_control_id = (known after apply)
+          [32m+[0m[0m origin_id                = "s3-website"
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [32m+[0m[0m restrictions {
+          [32m+[0m[0m geo_restriction {
+              [32m+[0m[0m locations        = (known after apply)
+              [32m+[0m[0m restriction_type = "none"
+            }
+        }
+
+      [32m+[0m[0m viewer_certificate {
+          [32m+[0m[0m cloudfront_default_certificate = true
+          [32m+[0m[0m minimum_protocol_version       = "TLSv1"
+        }
+    }
+
+[1m  # module.cloudfront_frontend.aws_cloudfront_origin_access_control.this["s3_oac"][0m will be created
+[0m  [32m+[0m[0m resource "aws_cloudfront_origin_access_control" "this" {
+      [32m+[0m[0m arn                               = (known after apply)
+      [32m+[0m[0m description                       = "CloudFront access to S3"
+      [32m+[0m[0m etag                              = (known after apply)
+      [32m+[0m[0m id                                = (known after apply)
+      [32m+[0m[0m name                              = "s3_oac"
+      [32m+[0m[0m origin_access_control_origin_type = "s3"
+      [32m+[0m[0m signing_behavior                  = "always"
+      [32m+[0m[0m signing_protocol                  = "sigv4"
+    }
+
+[1m  # module.iam_policy.aws_iam_policy.policy[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "policy" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m attachment_count = (known after apply)
+      [32m+[0m[0m description      = "ecs task exec addtional policy"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m name             = "csoft-prod-additonal-access-policy"
+      [32m+[0m[0m name_prefix      = (known after apply)
+      [32m+[0m[0m path             = "/"
+      [32m+[0m[0m policy           = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = [
+                          [32m+[0m[0m "s3:GetObject",
+                          [32m+[0m[0m "s3:ListBucket",
+                        ]
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = [
+                          [32m+[0m[0m "arn:aws:s3:::*",
+                          [32m+[0m[0m "arn:aws:s3:::*/*",
+                        ]
+                      [32m+[0m[0m Sid      = "ecss3envaccess"
+                    },
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = [
+                          [32m+[0m[0m "s3:PutObject",
+                          [32m+[0m[0m "s3:GetObject",
+                          [32m+[0m[0m "s3:ListBucket",
+                          [32m+[0m[0m "s3:PutObjectTagging",
+                          [32m+[0m[0m "s3:DeleteObject",
+                          [32m+[0m[0m "s3:PutObjectAcl",
+                        ]
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = [
+                          [32m+[0m[0m "arn:aws:s3:::*",
+                          [32m+[0m[0m "arn:aws:s3:::*/*",
+                        ]
+                      [32m+[0m[0m Sid      = "s3websiteaccess"
+                    },
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = [
+                          [32m+[0m[0m "s3:GetObject",
+                          [32m+[0m[0m "cloudfront:GetDistribution",
+                          [32m+[0m[0m "cloudfront:ListInvalidations",
+                          [32m+[0m[0m "cloudfront:GetInvalidation",
+                          [32m+[0m[0m "cloudfront:CreateInvalidation",
+                        ]
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = [
+                          [32m+[0m[0m "arn:aws:cloudfront::675169529857:distribution/*",
+                        ]
+                      [32m+[0m[0m Sid      = "cdninvalidation"
+                    },
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = "elasticfilesystem:*"
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = "*"
+                      [32m+[0m[0m Sid      = "efsFullAccess"
+                    },
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = "ecr:*"
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = "*"
+                      [32m+[0m[0m Sid      = "ecrFullAccess"
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m policy_id        = (known after apply)
+      [32m+[0m[0m tags             = {
+          [32m+[0m[0m "Environment"   = "Prod"
+          [32m+[0m[0m "Implementedby" = "Workmates"
+          [32m+[0m[0m "Layer"         = "Security"
+          [32m+[0m[0m "Managedby"     = "Csoft"
+          [32m+[0m[0m "Project"       = "Csoft"
+        }
+      [32m+[0m[0m tags_all         = {
+          [32m+[0m[0m "Environment"   = "Prod"
+          [32m+[0m[0m "Implementedby" = "Workmates"
+          [32m+[0m[0m "Layer"         = "Security"
+          [32m+[0m[0m "Managedby"     = "Csoft"
+          [32m+[0m[0m "Project"       = "Csoft"
+        }
+    }
+
+[1m  # module.s3_env_bucket.aws_s3_bucket.this[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket" "this" {
+      [32m+[0m[0m acceleration_status         = (known after apply)
+      [32m+[0m[0m acl                         = (known after apply)
+      [32m+[0m[0m arn                         = (known after apply)
+      [32m+[0m[0m bucket                      = "csoft-env-bucket"
+      [32m+[0m[0m bucket_domain_name          = (known after apply)
+      [32m+[0m[0m bucket_prefix               = (known after apply)
+      [32m+[0m[0m bucket_regional_domain_name = (known after apply)
+      [32m+[0m[0m force_destroy               = false
+      [32m+[0m[0m hosted_zone_id              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m object_lock_enabled         = false
+      [32m+[0m[0m policy                      = (known after apply)
+      [32m+[0m[0m region                      = (known after apply)
+      [32m+[0m[0m request_payer               = (known after apply)
+      [32m+[0m[0m tags_all                    = {
+          [32m+[0m[0m "Environment"   = "Prod"
+          [32m+[0m[0m "Implementedby" = "Workmates"
+          [32m+[0m[0m "Managedby"     = "Csoft"
+          [32m+[0m[0m "Project"       = "Csoft"
+        }
+      [32m+[0m[0m website_domain              = (known after apply)
+      [32m+[0m[0m website_endpoint            = (known after apply)
+
+      [32m+[0m[0m cors_rule (known after apply)
+
+      [32m+[0m[0m grant (known after apply)
+
+      [32m+[0m[0m lifecycle_rule (known after apply)
+
+      [32m+[0m[0m logging (known after apply)
+
+      [32m+[0m[0m object_lock_configuration (known after apply)
+
+      [32m+[0m[0m replication_configuration (known after apply)
+
+      [32m+[0m[0m server_side_encryption_configuration (known after apply)
+
+      [32m+[0m[0m versioning (known after apply)
+
+      [32m+[0m[0m website (known after apply)
+    }
+
+[1m  # module.s3_env_bucket.aws_s3_bucket_lifecycle_configuration.this[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket_lifecycle_configuration" "this" {
+      [32m+[0m[0m bucket                                 = (known after apply)
+      [32m+[0m[0m expected_bucket_owner                  = (known after apply)
+      [32m+[0m[0m id                                     = (known after apply)
+      [32m+[0m[0m transition_default_minimum_object_size = "all_storage_classes_128K"
+
+      [32m+[0m[0m rule {
+          [32m+[0m[0m id     = "5yearexpiration"
+          [32m+[0m[0m status = "Enabled"
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [32m+[0m[0m expiration {
+              [32m+[0m[0m days                         = 1825
+              [32m+[0m[0m expired_object_delete_marker = false
+            }
+
+          [32m+[0m[0m filter {
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+    }
+
+[1m  # module.s3_env_bucket.aws_s3_bucket_policy.this[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket_policy" "this" {
+      [32m+[0m[0m bucket = (known after apply)
+      [32m+[0m[0m id     = (known after apply)
+      [32m+[0m[0m policy = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "s3:PutObject"
+                      [32m+[0m[0m Condition = {
+                          [32m+[0m[0m StringEquals = {
+                              [32m+[0m[0m "s3:x-amz-acl" = "bucket-owner-full-control"
+                            }
+                        }
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "delivery.logs.amazonaws.com"
+                        }
+                      [32m+[0m[0m Resource  = "arn:aws:s3:::csoft-env-bucket/AWSLogs/675169529857/*"
+                      [32m+[0m[0m Sid       = "AWSLogDeliveryWrite"
+                    },
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "s3:GetBucketAcl"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "delivery.logs.amazonaws.com"
+                        }
+                      [32m+[0m[0m Resource  = "arn:aws:s3:::csoft-env-bucket"
+                      [32m+[0m[0m Sid       = "AWSLogDeliveryAclCheck"
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+    }
+
+[1m  # module.s3_env_bucket.aws_s3_bucket_public_access_block.this[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket_public_access_block" "this" {
+      [32m+[0m[0m block_public_acls       = true
+      [32m+[0m[0m block_public_policy     = true
+      [32m+[0m[0m bucket                  = (known after apply)
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m ignore_public_acls      = true
+      [32m+[0m[0m restrict_public_buckets = true
+    }
+
+[1mPlan:[0m [0m9 to add, 1 to change, 0 to destroy.
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mDeprecated value used[0m
+[33m│[0m [0m
+[33m│[0m [0m[0m  on modules\s3\outputs.tf line 28, in output "s3_bucket_lifecycle_configuration_rules":
+[33m│[0m [0m  28:   value       = [4mtry(aws_s3_bucket_lifecycle_configuration.this[0].rule, "")[0m[0m
+[33m│[0m [0m
+[33m│[0m [0m  The deprecation originates from module.s3_env_bucket.aws_s3_bucket_lifecycle_configuration.this[0].rule[0].prefix
+[33m│[0m [0m
+[33m│[0m [0mDeprecated resource attribute "rule[0].prefix" used. Refer to the
+[33m│[0m [0mprovider documentation for details.
+[33m╵[0m[0m
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
+Releasing state lock. This may take a few moments...
