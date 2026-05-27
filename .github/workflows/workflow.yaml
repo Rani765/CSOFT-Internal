@@ -25,9 +25,9 @@ permissions:
 env:
   TFVAR_NAME_PROD: terraform.tfvars
   BRANCH_NAME_PROD: main
-  AWS_REGION: ap-south-1
+  AWS_REGION: us-east-1
   TERRAFORM_VERSION: "1.11.4"
-  ROLE_TO_ASSUME: arn:aws:iam::024848447708:role/Terraform-deployer-role
+  ROLE_TO_ASSUME: arn:aws:iam::675169529857:role/Terraform-deployer-role
   AWS_SESSION_NAME: Terraform-deployer-role
 
 jobs:
