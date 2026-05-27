@@ -13,7 +13,7 @@ data "aws_iam_policy_document" "waf_logs_s3" {
 
     actions = ["s3:PutObject"]
 
-    resources = ["arn:aws:s3:::${var.alb_waf_s3}/AWSLogs/${data.aws_caller_identity.current.account_id}/*"]
+    resources = ["arn:aws:s3:::aws-waf-logs-${var.alb_waf_s3}/AWSLogs/${data.aws_caller_identity.current.account_id}/*"]
 
     condition {
       test     = "StringEquals"
@@ -45,7 +45,7 @@ data "aws_iam_policy_document" "waf_logs_s3" {
 
     actions = ["s3:GetBucketAcl"]
 
-    resources = ["arn:aws:s3:::${var.alb_waf_s3}"]
+    resources = ["arn:aws:s3:::aws-waf-logs-${var.alb_waf_s3}"]
 
     condition {
       test     = "StringEquals"
@@ -68,7 +68,7 @@ data "aws_iam_policy_document" "waf_logs_s3" {
 resource "aws_wafv2_web_acl" "alb-acl-main" {
   name        = var.waf_name
   description = var.waf_description
-  scope       = "REGIONAL"
+  scope       = var.waf_scope
 
   default_action {
     allow {}
@@ -255,7 +255,28 @@ resource "aws_wafv2_web_acl_association" "alb_associations" {
 
 module "alb_waf_logging" {
   source        = "../s3"
-  bucket        = var.alb_waf_s3
+  bucket        = "aws-waf-logs-${var.alb_waf_s3}"
   policy        = data.aws_iam_policy_document.waf_logs_s3.json
   force_destroy = false
+
+  lifecycle_rule = [
+    {
+      id      = "waf-logs-30-day-retention"
+      enabled = true
+      expiration = {
+        days = 30
+      }
+    }
+  ]
+}
+
+################################################################################
+# WAF Logging Configuration
+################################################################################
+
+resource "aws_wafv2_web_acl_logging_configuration" "this" {
+  log_destination_configs = [module.alb_waf_logging.s3_bucket_arn]
+  resource_arn            = aws_wafv2_web_acl.alb-acl-main.arn
+
+  depends_on = [module.alb_waf_logging]
 }

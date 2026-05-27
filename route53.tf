@@ -27,6 +27,31 @@ module "route53_zone" {
 }
 
 ####################################################################
+# Route53 - Public Hosted Zone
+####################################################################
+
+module "route53_public_zone" {
+  source = "./modules/route53_module/zones"
+
+  create = true
+
+  zones = {
+    "holaamigoes.in" = {
+      domain_name = "holaamigoes.in"
+      comment     = "Public hosted zone for holaamigoes.in"
+      tags = {
+        Environment = local.environment
+        Name        = "holaamigoes-public-zone"
+      }
+    }
+  }
+
+  tags = {
+    Environment = local.environment
+  }
+}
+
+####################################################################
 # Route53 - Zookeeper DNS Records
 ####################################################################
 

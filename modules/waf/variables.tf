@@ -9,6 +9,12 @@ variable "waf_description" {
   default     = "WAF Web ACL for ALB protection"
 }
 
+variable "waf_scope" {
+  description = "Scope of the WAF Web ACL - REGIONAL or CLOUDFRONT"
+  type        = string
+  default     = "REGIONAL"
+}
+
 variable "alb_waf_s3" {
   description = "S3 bucket name for WAF logs"
   type        = string

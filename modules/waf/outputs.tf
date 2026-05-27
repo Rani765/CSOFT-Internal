@@ -17,3 +17,8 @@ output "waf_logging_bucket" {
   description = "The S3 bucket used for WAF logging"
   value       = module.alb_waf_logging.s3_bucket_id
 }
+
+output "waf_logging_configuration_id" {
+  description = "The ID of the WAF logging configuration"
+  value       = aws_wafv2_web_acl_logging_configuration.this.id
+}
